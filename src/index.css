@@ -9,7 +9,14 @@
   --burdeos: #541212;
   --negro: #0f0e0e;
 
-  /*TIPOGRAFÍA*/
-  --titles: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --text: 'EB Garamond', Garamond, 'Times New Roman', serif;
+  /*TIPOGRAFÍASs*/
+  --titles: 'Roboto', 'Helvetica Neue', Helvetica;
+  --text: 'EB Garamond', Garamond;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
