@@ -1,4 +1,5 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+//import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 //import Profile from "./pages/Profile";
@@ -13,22 +14,22 @@ import Home from "./pages/Home";
 
 function App() {
   return (
-    <div classname="App">
+    <div className="App">
       <BrowserRouter>
-        <ProjectProvider>
-          <Header/>
+        {/* <ProjectProvider>
+          <Header/>*/}
             <Routes>
-              <Route path="/projects" element={<Projects />} />
+             {/* <Route path="/projects" element={<Projects />} /> */}
               <Route path="/home" element={<Home />} />
-              <Route path="/profile" element={<Profile />} />
+              {/* <Route path="/profile" element={<Profile />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/Button" element={<Button />} />
               <Route path="Input" element={<Input />} />
-              <Route path="ProjectCard" element={<ProjectCard />} />
+              <Route path="ProjectCard" element={<ProjectCard />} />*/}
             </Routes>
-          <Footer/>
-        </ProjectProvider>
-      </BrowserRouter>
+          {/*<Footer/>*/}
+       {/* </ProjectProvider> */}
+       </BrowserRouter> 
     </div>
   );
 }
