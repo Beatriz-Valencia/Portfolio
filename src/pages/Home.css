@@ -1,17 +1,16 @@
 /*Home.jsx*/
 .home {
     --scalableText: clamp (16px, 3vw, 40px);
-    /* --maxw: 1280px; */
-
-    /* max-width: var(--maxw); */
+    min-height: 100svh;
     margin: 0 auto;
     padding: var(--scalableText);
     display: grid;
     grid-template-columns: 1.25fr 0.95fr;
+    grid-template-rows: auto auto 1fr auto;
     grid-template-areas: 
     "top-text ."
     "middle-text ."
-    "lower-text image"
+    "lower-text ."
     "wordmark image";
     gap: clamp(16px, 3vw, 40px);
     color: var(--black);
@@ -24,35 +23,41 @@
 .text {grid-area: lower-text}
 .title_terciary {grid-area: wordmark;}
 
+.title_primary, .title_secondary, .title_terciary {
+    padding-left: clamp (12px, 2.5vw, 20px);
+}
+
 .title_primary{
-    margin: 0;
+    margin: 20px 20px;
     font-family: var(--titles);
     font-weight: 600;
-    font-size: clamp (12px, 1.2vw, 14px);
+    font-size: clamp(12px, 1.2vw, 14px);
     letter-spacing: .06em;
 }
 
 .title_secondary {
-     margin: clamp (8px, 2vw, 12px) 0 0;
+    margin: 20px 20px;
     font-family: var(--titles);
     font-weight: 800;
-    font-size: clamp (28px, 4vw, 44px);
+    font-size: clamp(28px, 4vw, 44px);
     line-height: 1.05;
     letter-spacing: .01em;
     color: var(--negro);
 }
 
 .text{
-    margin:clamp (8px, 2vw, 12px) 0 0;
+    margin:20px 20px;
     max-width: 62ch;
     font-family: var(--text);
     font-size: clamp(14px, 1.3vw, 16px);
     line-height: 1.35;
-    color: (--black)
+    color: (--black);
+    max-width: 26ch;
 }
 
 .title_terciary {
-    margin: clamp (24px, 6vw, 36px) 0 0; /* 0 0 es para los márgenes laterales*/
+    margin: 20px 20px;
+    margin: clamp(24px, 6vw, 36px) 0 0; /* 0 0 es para los márgenes laterales*/
     font-family: var(--titles);
     font-weight: 800;
     font-size: clamp (100px, 20vw, 200px);
@@ -60,6 +65,7 @@
     letter-spacing: .005em;
     color: var(--black);
     text-transform: uppercase;
+    align-self: end;
 }
 
 .home img {
@@ -83,6 +89,10 @@
     .home img {
         margin: 10px 10px;
     }
+
+    .title_primary, .title_secondary, .title_terciary, .text {
+    margin: 10px 10px;
+}
 }
 /*RESPONSIVE MAX WIDTH 768px*/
 @media (max-width: 768px) {
@@ -108,6 +118,11 @@
     .home img {
         margin: 10px 10px;
     }
+
+    .title_primary, .title_secondary, .title_terciary, .text {
+    margin: 10px 10px;
+}
+
 }
 
 /*RESPONSIVE MAX WIDTH 480px*/
@@ -123,4 +138,8 @@
     .home img {
         margin: 5px 5px;
     }
+
+    .title_primary, .title_secondary, .title_terciary, .text {
+    margin: 5px 5px;
+}
 }
