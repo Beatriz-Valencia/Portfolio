@@ -1,28 +1,28 @@
 /*Home.jsx*/
 .home {
     --scalableText: clamp (16px, 3vw, 40px);
-    --maxw: 1280px;
+    /* --maxw: 1280px; */
 
-    max-width: var(--maxw);
+    /* max-width: var(--maxw); */
     margin: 0 auto;
     padding: var(--scalableText);
     display: grid;
-    grid-template-columns: 1.25fr 0.95;
+    grid-template-columns: 1.25fr 0.95fr;
     grid-template-areas: 
     "top-text ."
-    "middle-text image"
+    "middle-text ."
     "lower-text image"
-    "wordmark wordmark";
+    "wordmark image";
     gap: clamp(16px, 3vw, 40px);
-    color: var(--negro);
-    background: var(--blanco);
+    color: var(--black);
+    background: var(--white);
 }
 
 /*Mapeo de elementos en áreas del grid*/
 .title_primary {grid-area:top-text;}
 .title_secondary {grid-area: middle-text;}
-.text{grid-area: lower text}
-.title-terciary {grid-area: wordmark;}
+.text {grid-area: lower-text}
+.title_terciary {grid-area: wordmark;}
 
 .title_primary{
     margin: 0;
@@ -33,11 +33,94 @@
 }
 
 .title_secondary {
-     margin: 0;
+     margin: clamp (8px, 2vw, 12px) 0 0;
     font-family: var(--titles);
     font-weight: 800;
     font-size: clamp (28px, 4vw, 44px);
     line-height: 1.05;
     letter-spacing: .01em;
     color: var(--negro);
+}
+
+.text{
+    margin:clamp (8px, 2vw, 12px) 0 0;
+    max-width: 62ch;
+    font-family: var(--text);
+    font-size: clamp(14px, 1.3vw, 16px);
+    line-height: 1.35;
+    color: (--black)
+}
+
+.title_terciary {
+    margin: clamp (24px, 6vw, 36px) 0 0; /* 0 0 es para los márgenes laterales*/
+    font-family: var(--titles);
+    font-weight: 800;
+    font-size: clamp (100px, 20vw, 200px);
+    line-height: .95;
+    letter-spacing: .005em;
+    color: var(--black);
+    text-transform: uppercase;
+}
+
+.home img {
+    margin: 20px 20px;
+    grid-area: image;
+    width: min(380px, 33vw);
+    aspect-ratio: 3/4;
+    object-fit:cover; /* Rellena el contenedor recortando lo sobrante sin deformar */
+    justify-self:end; /* Empuja la imagen a la derecha dentro de su celda */
+    align-self: start; /* Alinea la imagen arriba de su celda */
+    display: block;
+    border-radius: 2px;
+
+}
+
+/*RESPONSIVE MAX WIDTH 1024px*/
+@media (max-width: 1024px){
+    .home{
+        grid-template-columns: 1fr 0.9fr;
+    }
+    .home img {
+        margin: 10px 10px;
+    }
+}
+/*RESPONSIVE MAX WIDTH 768px*/
+@media (max-width: 768px) {
+    .home{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "top text"
+        "middle-text"
+        "image"
+        "lower-text"
+        "wordmark";
+    }
+    .image{
+        width:100%;
+        aspect-ratio: 3/4;
+        justify-self:start; /* Alineada a la izquierda en mobile */
+    }
+
+    .text{
+        max-width: 70ch;
+    }
+
+    .home img {
+        margin: 10px 10px;
+    }
+}
+
+/*RESPONSIVE MAX WIDTH 480px*/
+@media (max-width: 480px) {
+    .home {
+        padding: clamp (14px, 4vw, 20px);
+        gap: clamp(18px, 5vw, 28px);
+    }
+    .title_secondary,
+    .title_terciary {
+        letter-spacing: 0
+    }
+    .home img {
+        margin: 5px 5px;
+    }
 }
