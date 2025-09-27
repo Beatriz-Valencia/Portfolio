@@ -1,0 +1,43 @@
+/*Home.jsx*/
+.home {
+    --scalableText: clamp (16px, 3vw, 40px);
+    --maxw: 1280px;
+
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: var(--scalableText);
+    display: grid;
+    grid-template-columns: 1.25fr 0.95;
+    grid-template-areas: 
+    "top-text ."
+    "middle-text image"
+    "lower-text image"
+    "wordmark wordmark";
+    gap: clamp(16px, 3vw, 40px);
+    color: var(--negro);
+    background: var(--blanco);
+}
+
+/*Mapeo de elementos en áreas del grid*/
+.title_primary {grid-area:top-text;}
+.title_secondary {grid-area: middle-text;}
+.text{grid-area: lower text}
+.title-terciary {grid-area: wordmark;}
+
+.title_primary{
+    margin: 0;
+    font-family: var(--titles);
+    font-weight: 600;
+    font-size: clamp (12px, 1.2vw, 14px);
+    letter-spacing: .06em;
+}
+
+.title_secondary {
+     margin: 0;
+    font-family: var(--titles);
+    font-weight: 800;
+    font-size: clamp (28px, 4vw, 44px);
+    line-height: 1.05;
+    letter-spacing: .01em;
+    color: var(--negro);
+}

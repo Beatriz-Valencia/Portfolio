@@ -2,12 +2,12 @@
   :root {
 
   /*COLORES*/
-  --blanco: #EEEEEE;
-  --azul: #468A9A;
-  --ocre: #965200;
-  --marron: #874225;
-  --burdeos: #541212;
-  --negro: #0f0e0e;
+  --white: #EEEEEE;
+  --blue: #468A9A;
+  --light-brown: #965200;
+  --brown: #874225;
+  --dark-brown: #541212;
+  --black: #0f0e0e;
 
   /*TIPOGRAFÍASs*/
   --titles: 'Roboto', 'Helvetica Neue', Helvetica;
