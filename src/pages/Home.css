@@ -1,64 +1,83 @@
 /*Home.jsx*/
 .home {
-    --scalableText: clamp (16px, 3vw, 40px);
+    --scalableText: clamp(8px, 1.5vw, 20px);
+    --gap-text-wordmark: clamp(8px, 2vw, 20px);
     min-height: 100svh;
     margin: 0 auto;
     padding: var(--scalableText);
     display: grid;
+    
     grid-template-columns: 1.25fr 0.95fr;
-    grid-template-rows: auto auto 1fr auto;
-    grid-template-areas: 
-    "top-text ."
-    "middle-text ."
-    "lower-text ."
-    "wordmark image";
-    gap: clamp(8px, 1.5vw, 20px);
+    grid-template-rows: auto auto 1fr auto var(--gap-text-wordmark) auto;
+    grid-template-areas:
+        "top-text ."
+        "middle-text ."
+        ".           ." /* 1fr*/
+        "lower-text ."
+        ".           ." /*fila espaciadora*/
+        "wordmark image";
+    column-gap: clamp(8px, 1.5vw, 20px);
+    row-gap: 0;
     color: var(--black);
     background: var(--white);
 }
 
 /*Mapeo de elementos en áreas del grid*/
-.title_primary {grid-area:top-text;}
-.title_secondary {grid-area: middle-text;}
-.text {grid-area: lower-text}
-.title_terciary {grid-area: wordmark;}
-
-.title_primary, .title_secondary, .title_terciary {
-    padding-left: clamp (12px, 2.5vw, 20px);
+.title_primary {
+    grid-area: top-text;
 }
 
-.title_primary{
-    margin: 20px 20px;
+.title_secondary {
+    grid-area: middle-text;
+}
+
+.text {
+    grid-area: lower-text
+}
+
+.title_terciary {
+    grid-area: wordmark;
+}
+
+.title_primary,
+.title_secondary,
+.title_terciary {
+    padding-left: clamp(12px, 2.5vw, 20px);
+}
+
+.title_primary {
+    margin: 10px;
     font-family: var(--titles);
     font-weight: 600;
-    font-size: clamp(12px, 1.2vw, 14px);
+    font-size: clamp(18px, 1.8vw, 20px);
     letter-spacing: .06em;
 }
 
 .title_secondary {
-    margin: 20px 20px;
+    margin: 10px;
     font-family: var(--titles);
-    font-weight: 800;
+    font-weight: 600;
     font-size: clamp(28px, 4vw, 44px);
     line-height: 1.05;
     letter-spacing: .01em;
     color: var(--negro);
 }
 
-.text{
-    margin:clamp(8px, 2vw, 12px) 0 0;
-    margin:20px 20px;
+.text {
+    margin: clamp(8px, 2vw, 12px) 0 0;
+    margin: 10px;
     max-width: 62ch;
     font-family: var(--text);
     font-size: clamp(20px, 1.8vw, 22px);
     line-height: 1.35;
     color: (--black);
-   
+
 }
 
 .title_terciary {
-    margin: 20px 20px;
-    margin: clamp(24px, 6vw, 36px) 0 0; /* 0 0 es para los márgenes laterales*/
+    margin: 10px;
+    margin: clamp(8px, 2vw, 12px) 0 0;
+    /* 0 0 es para los márgenes laterales*/
     font-family: var(--titles);
     font-weight: 800;
     font-size: clamp(90px, 18vw, 180px);
@@ -67,70 +86,82 @@
     color: var(--black);
     text-transform: uppercase;
     align-self: end;
-   
+
 }
 
 .home img {
-    margin: 20px 20px;
+    margin: 10px;
     grid-area: image;
     width: min(380px, 33vw);
     aspect-ratio: 3/4;
-    object-fit:cover; /* Rellena el contenedor recortando lo sobrante sin deformar */
-    justify-self:end; /* Empuja la imagen a la derecha dentro de su celda */
-    align-self: start; /* Alinea la imagen arriba de su celda */
+    object-fit: cover;
+    /* Rellena el contenedor recortando lo sobrante sin deformar */
+    justify-self: end;
+    /* Empuja la imagen a la derecha dentro de su celda */
+    align-self: end;
+    /* Alinea la imagen arriba de su celda */
     display: block;
     border-radius: 2px;
-    align-self:end;
 
 }
 
 /*RESPONSIVE MAX WIDTH 1024px*/
-@media (max-width: 1024px){
-    .home{
+@media (max-width: 1024px) {
+    .home {
         grid-template-columns: 1fr 0.9fr;
     }
+
     .home img {
         margin: 10px 10px;
     }
 
-    .title_primary, .title_secondary, .title_terciary, .text {
-    margin: 10px 10px;
+    .title_primary,
+    .title_secondary,
+    .title_terciary,
+    .text {
+        margin: 10px 10px;
+    }
 }
-}
+
 /*RESPONSIVE MAX WIDTH 768px*/
 @media (max-width: 768px) {
-    .home{
+    .home {
         grid-template-columns: 1fr;
-        grid-template-areas: 
-        "top text"
-        "middle-text"
-        "image"
-        "lower-text"
-        "wordmark";
+        grid-template-areas:
+            "top text"
+            "middle-text"
+            "image"
+            "lower-text"
+            "wordmark";
         min-height: auto;
     }
-    .image{
-        width:100%;
+
+    .image {
+        width: 100%;
         aspect-ratio: 3/4;
-        justify-self:start; /* Alineada a la izquierda en mobile */
+        justify-self: start;
+        /* Alineada a la izquierda en mobile */
     }
 
-    .text{
+    .text {
         max-width: 70ch;
     }
 
     .home img {
         margin: 10px 10px;
         justify-self: start;
-        align-self:start;
+        align-self: start;
         width: 100%;
 
 
     }
 
-    .title_primary, .title_secondary, .title_terciary, .text {
-    margin: 10px 10px;
-}
+    .title_primary,
+    .title_secondary,
+    .title_terciary,
+    .text {
+        margin: 10px 10px;
+    }
 
 }
 
@@ -140,15 +171,20 @@
         padding: clamp(14px, 4vw, 20px);
         gap: clamp(18px, 5vw, 28px);
     }
+
     .title_secondary,
     .title_terciary {
         letter-spacing: 0
     }
+
     .home img {
         margin: 5px 5px;
     }
 
-    .title_primary, .title_secondary, .title_terciary, .text {
-    margin: 5px 5px;
-}
+    .title_primary,
+    .title_secondary,
+    .title_terciary,
+    .text {
+        margin: 5px 5px;
+    }
 }
