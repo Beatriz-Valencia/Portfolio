@@ -12,7 +12,7 @@
     "middle-text ."
     "lower-text ."
     "wordmark image";
-    gap: clamp(16px, 3vw, 40px);
+    gap: clamp(8px, 1.5vw, 20px);
     color: var(--black);
     background: var(--white);
 }
