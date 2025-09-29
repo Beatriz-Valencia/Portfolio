@@ -192,6 +192,9 @@
             "."
             "wordmark";
 
+            row-gap: 0;
+            align-content: start;
+
     }
 
     .title_secondary,
