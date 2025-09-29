@@ -2,6 +2,7 @@
 .home {
     --scalableText: clamp(8px, 1.5vw, 20px);
     --gap-text-wordmark: clamp(8px, 2vw, 20px);
+    --gap-text-wordmark-mobile: clamp(1px, 0.2vw, 3px);
     
     min-height: 100vh;
     min-height: 100dvh;
@@ -78,7 +79,7 @@
     margin: clamp(10px, 2vw, 18px) 0 0;
     max-width: 51ch;
     font-family: var(--text);
-    font-size: clamp(10px, 1.8vw, 22px);
+    font-size: clamp(18px, 2.6vw, 22px);
     line-height: 1.35;
     color: (--black);
 
@@ -102,6 +103,7 @@
     margin: 10px;
     margin-right: 0px;
     margin-bottom: 20px;
+    padding-left:0;
     grid-area: image;
     width: clamp(220px, 32vw, 380px);
     aspect-ratio: 3/4;
@@ -123,14 +125,8 @@
     }
 
     .home img {
-        margin: 10px 10px;
-    }
-
-    .title_primary,
-    .title_secondary,
-    .title_terciary,
-    .text {
-        margin: 10px 10px;
+        grid-area: image;
+        justify-self: end;
     }
 }
 
@@ -177,6 +173,25 @@
         padding: clamp(14px, 4vw, 20px);
         gap: clamp(18px, 5vw, 28px);
         min-height: 100svh;
+        box-sizing: border-box; /*evita desbordes por padding*/
+        width: 100%;
+        align-content: center;
+        grid-template-rows:
+            auto /* top-text*/
+            auto /* middle-text*/
+            auto /* image*/
+            auto /*lower-text*/
+            var(--gap-text-wordmark-mobile)
+            auto /*wordmark*/;
+
+        grid-template-areas:
+            "top-text"
+            "middle-text"
+            "image"
+            "lower-text"
+            "."
+            "wordmark";
+
     }
 
     .title_secondary,
@@ -185,9 +200,17 @@
     }
 
     .home img {
-        margin: 5px 5px;
+        width: clamp(17rem, 85vw, 25rem);
+        max-height: 48dvh;
+        justify-self: start;
+        align-self: start;
     }
 
+    .title_terciary{
+        font-size: clamp(40px, 14vw, 88px);
+          align-self: end; 
+    }
+    
     .title_primary,
     .title_secondary,
     .title_terciary,
