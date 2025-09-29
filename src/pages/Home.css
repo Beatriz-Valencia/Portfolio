@@ -2,7 +2,11 @@
 .home {
     --scalableText: clamp(8px, 1.5vw, 20px);
     --gap-text-wordmark: clamp(8px, 2vw, 20px);
+    
+    min-height: 100vh;
+    min-height: 100dvh;
     min-height: 100svh;
+    
     margin: 0 auto;
     padding: var(--scalableText);
     display: grid;
@@ -45,7 +49,9 @@
 
 .title_primary,
 .title_secondary,
-.title_terciary, .home img, .text {
+.title_terciary,
+.text {
+    margin: 0;
     padding-left: clamp(12px, 2.5vw, 20px);
 }
 
@@ -59,6 +65,7 @@
 
 .title_secondary {
     margin: 10px;
+    margin-top: 20px;
     font-family: var(--titles);
     font-weight: 600;
     font-size: clamp(28px, 4vw, 44px);
@@ -93,8 +100,10 @@
 
 .home img {
     margin: 10px;
+    margin-right: 0px;
+    margin-bottom: 20px;
     grid-area: image;
-    width: min(380px, 33vw);
+    width: clamp(220px, 32vw, 380px);
     aspect-ratio: 3/4;
     object-fit: cover;
     /* Rellena el contenedor recortando lo sobrante sin deformar */
@@ -129,20 +138,14 @@
 @media (max-width: 768px) {
     .home {
         grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto var(--gap-text-wordmark) auto;
         grid-template-areas:
-            "top text"
+            "top-text"
             "middle-text"
             "image"
             "lower-text"
             "wordmark";
         min-height: auto;
-    }
-
-    .image {
-        width: 100%;
-        aspect-ratio: 3/4;
-        justify-self: start;
-        /* Alineada a la izquierda en mobile */
     }
 
     .text {
@@ -154,8 +157,9 @@
         justify-self: start;
         align-self: start;
         width: 100%;
-
-
+         aspect-ratio: 3/4;
+        justify-self: start;
+        /* Alineada a la izquierda en mobile */
     }
 
     .title_primary,
@@ -172,6 +176,7 @@
     .home {
         padding: clamp(14px, 4vw, 20px);
         gap: clamp(18px, 5vw, 28px);
+        min-height: 100svh;
     }
 
     .title_secondary,
