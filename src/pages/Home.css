@@ -6,20 +6,24 @@
     margin: 0 auto;
     padding: var(--scalableText);
     display: grid;
-    
+
     grid-template-columns: 1.25fr 0.95fr;
     grid-template-rows: auto auto 1fr auto var(--gap-text-wordmark) auto;
     grid-template-areas:
         "top-text ."
         "middle-text ."
-        ".           ." /* 1fr*/
+        ".           ."
+        /* 1fr*/
         "lower-text ."
-        ".           ." /*fila espaciadora*/
+        ".           ."
+        /*fila espaciadora*/
         "wordmark image";
     column-gap: clamp(8px, 1.5vw, 20px);
+    padding-block: clamp(3px, 0.8vh, 6px);
     row-gap: 0;
     color: var(--black);
     background: var(--white);
+    align-content: center;
 }
 
 /*Mapeo de elementos en áreas del grid*/
@@ -41,7 +45,7 @@
 
 .title_primary,
 .title_secondary,
-.title_terciary {
+.title_terciary, .home img, .text {
     padding-left: clamp(12px, 2.5vw, 20px);
 }
 
@@ -64,18 +68,16 @@
 }
 
 .text {
-    margin: clamp(8px, 2vw, 12px) 0 0;
-    margin: 10px;
-    max-width: 62ch;
+    margin: clamp(10px, 2vw, 18px) 0 0;
+    max-width: 51ch;
     font-family: var(--text);
-    font-size: clamp(20px, 1.8vw, 22px);
+    font-size: clamp(10px, 1.8vw, 22px);
     line-height: 1.35;
     color: (--black);
 
 }
 
 .title_terciary {
-    margin: 10px;
     margin: clamp(8px, 2vw, 12px) 0 0;
     /* 0 0 es para los márgenes laterales*/
     font-family: var(--titles);
@@ -144,7 +146,7 @@
     }
 
     .text {
-        max-width: 70ch;
+        max-width: 60ch;
     }
 
     .home img {
