@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import projects from "../data/projects";
+import projects from "../data/data";
 import "./Projects.css";
+import ProjectCard from "../components/Projects/Project/ProjectCard";
 
 export default function Projects() {
   return (
@@ -13,7 +14,7 @@ export default function Projects() {
       </header>
       <div className="projects-grid"> {/*grid responsive para renderizado de tarjetas*/}
         {projects.map((p) => (
-          <ProjectCard key={p.id} project={p} />//renderiza una tarjeta por proyecto
+          <ProjectCard key={p.id} project={p} />//renderiza una tarjeta por proyecto REVISAR
         ))}
       </div>
     </section>

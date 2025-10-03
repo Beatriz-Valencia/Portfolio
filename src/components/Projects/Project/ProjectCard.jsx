@@ -1,7 +1,5 @@
-import React from "react";
 import {Link} from "react-router-dom";
-import projects from "../data/projects.js"
-import "../pages/Projects.css";
+import "../Project/ProjectCard.css";
 
 
 function ProjectCard ({project}) {
@@ -19,3 +17,5 @@ function ProjectCard ({project}) {
             </Link>
     )
 }
+
+export default ProjectCard;

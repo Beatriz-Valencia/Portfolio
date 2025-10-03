@@ -10,7 +10,7 @@ import Projects from "./pages/Projects";
 //import Footer from "./components/Footer";
 //import Button from "./components/Button";
 //import Input from "./components/Input";
-import projects from "./data/projects";
+import projects from "./data/data";
 
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
             <Routes>
               <Route path="/home" element={<Home />} />
               <Route path="/projects" element={<Projects />} />
-              <Route path="/project/:id" element={<ProjectDetail/>}/>
+              {/* <Route path="/project/:id" element={<ProjectDetail/>}/> */}
               {/* <Route path="/profile" element={<Profile />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/Button" element={<Button />} />
