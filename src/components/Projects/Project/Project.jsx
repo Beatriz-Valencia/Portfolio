@@ -1,11 +1,21 @@
-import Project from "./Project/Project";
+import React from "react";
+import {Link} from "react-router-dom";
+import projects from "../data/projects.js"
+import "../pages/Projects.css";
 
-const Project = () => { //esto en modelo es plural
+
+function ProjectCard ({project}) {
     return (
-        <div>
-            <Project/>
-        </div>
+        <Link //enlace SPA sin recarga a la rua del detalle
+            to={`/project/${project.id}`} //Construye la url con el id del proyecto   REVISAR
+            className="card-link" //clase para estilos del enlace que envuelve la tarjeta
+            >
+                <div className="card">
+                    <img src={project.cover} alt={project.title} className="card-image"/>
+                    <div className ="card-title">
+                        <h3 className="card-title">{project.title}</h3>
+                        </div>
+                </div>
+            </Link>
     )
 }
-
-export default Project;
