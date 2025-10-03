@@ -2,11 +2,11 @@ const ProjectReducer = (state, action) => {
     switch (action.type) {
         case "GET_PROJECTS":
             return {
-                ...state, 
-                projects:action.payload,
+                ...state,
+                projects: action.payload,
             };
-            default:
-                return state;
+        default:
+            return state;
     }
 };
 
