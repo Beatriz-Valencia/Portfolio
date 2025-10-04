@@ -44,8 +44,7 @@ export default function ProjectDetail () {
                     </div>
                 <div className="stack"> 
                     <img
-                    key={i}
-                    sec={src}
+                    src={project.images}
                     className="detail-image"
                 />
                 
