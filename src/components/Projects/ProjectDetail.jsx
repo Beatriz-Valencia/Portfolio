@@ -1,11 +1,11 @@
 import {useParams, useNavigate} from "react-router-dom";
 import data from "../data/data.js";
-import ProjectDetail from "../Projects/ProjectDetail.css";
+import "./Projects/ProjectDetail.css";
 
 //Transforma un URL de Youtube en URL embedded
 function toYoutubeEmbed(url) {
     try{
-        const u = new URL(url) { //Parsea la cadena a objecto URL
+        const u = new URL(url) //Parsea la cadena a objecto URL
             if (u.hostname.includes("youtube.com")) {
             const id = u.searchParams.get("v"); //extrae parámetro v (id del video)
             return id? `https://www.youtube.com/embed/${id}` :url;  //devuelve URL /embed/ID   
@@ -15,7 +15,43 @@ function toYoutubeEmbed(url) {
         //     return id? `https://www.youtube.com/embed/${id}` :url // devuelve URL embedebible
         // }
     }
-        catch {
-return url;
+        catch(e) {
+            return url;
         }
+}
+
+export default function ProjectDetail () {
+    const {id} = useParams(); //lee el parámetro :id de la URL
+    const navigate = useNavigate();
+    const project = data.find((p) => p.id === id);
+    return (
+        <section className="detail-container">
+            <div className = "detail-actions">
+                <button onClick={() => navigate(-1)} className="button-navigate"> Volver</button>
+                <a href={project.youtubeUrl}
+                target="_blank"
+                className="button-youtube"
+                >Ver Demo</a>
+            </div>
+
+            <h2 className="detail-title">{project.title}</h2>
+                {project.shortDescription && (
+                    <p className ="detail-description">{project.shortDescription}</p>
+                )}
+                
+                <div className="video">
+                    <iframe className = "video-frame" src={toYoutubeEmbed(project.youtubeUrl)} title={`${project.title}- demo`} allow="autoplay" allowFullScreen/>
+                    </div>
+
+                <div className="stack"> 
+                {project.images.map((src, i) => (
+                    <img
+                    key={i}
+                    sec={src}
+                    className="detail-image"
+                />
+                ))}
+                </div>       
+        </section>
+    )
 }
