@@ -1,6 +1,6 @@
 import {useParams, useNavigate} from "react-router-dom";
-import data from "../data/data.js";
-import "./Projects/ProjectDetail.css";
+import data from "../../data/data";
+import "../../components/Projects/ProjectDetail.css";
 
 //Transforma un URL de Youtube en URL embedded
 function toYoutubeEmbed(url) {
@@ -23,7 +23,7 @@ function toYoutubeEmbed(url) {
 export default function ProjectDetail () {
     const {id} = useParams(); //lee el parámetro :id de la URL
     const navigate = useNavigate();
-    const project = data.find((p) => p.id === id);
+    const project = data.find((p) => String(p.id) === String(id));
     return (
         <section className="detail-container">
             <div className = "detail-actions">
@@ -42,16 +42,14 @@ export default function ProjectDetail () {
                 <div className="video">
                     <iframe className = "video-frame" src={toYoutubeEmbed(project.youtubeUrl)} title={`${project.title}- demo`} allow="autoplay" allowFullScreen/>
                     </div>
-
                 <div className="stack"> 
-                {project.images.map((src, i) => (
                     <img
                     key={i}
                     sec={src}
                     className="detail-image"
                 />
-                ))}
-                </div>       
+                
+                </div>     
         </section>
     )
 }

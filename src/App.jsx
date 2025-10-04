@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 //import Profile from "./pages/Profile";
 import Projects from "./pages/Projects";
 //import Contact from "./pages/Contact";
-//import ProjectDetail from "./components/ProjectDetail";
+import ProjectDetail from "./components/Projects/ProjectDetail";
 //import { ProjectProvider } from "./context/ProjectContext/ProjectState";
 //import Header from "./components/Header";
 //import Footer from "./components/Footer";
@@ -22,7 +22,7 @@ function App() {
             <Routes>
               <Route path="/home" element={<Home />} />
               <Route path="/projects" element={<Projects />} />
-              {/* <Route path="/project/:id" element={<ProjectDetail/>}/> */}
+              <Route path="/project/:id" element={<ProjectDetail/>}/>
               {/* <Route path="/profile" element={<Profile />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/Button" element={<Button />} />
