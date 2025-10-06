@@ -1,10 +1,12 @@
 /*Enlace que envuelve la tarjeta*/
 .card-link {
-    display: block; /*se comporta como bloque*/
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 100%;
+    gap: 10px;
     text-decoration: none;
-    color: inherit; /*Hereda el color el del texto del contenedor*/
+    color: inherit;
+    /*Hereda el color el del texto del contenedor*/
 }
 
 .card {
@@ -16,34 +18,40 @@
     border-radius: 12px;
     overflow: hidden;
     background: var(--white);
- 
+
 }
 
 .card-image {
     position: absolute;
-    inset:1; /* Top, right, bottom, left = 0 → ocupa todo el contenedor */
+    inset: 1;
+    /* Top, right, bottom, left = 0 → ocupa todo el contenedor */
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    
+
 }
 
 .card-title {
-    position: absolute; /*pegado al borde inferior de la tarjeta*/
+    position: static;
+    margin: 0;
+    text-align: center;
     left: 0;
     right: 0;
     bottom: 0;
-    /* padding: 12px 12px; */
+    padding: 12px 12px;
+    font-family: var(--titles);
+    font-size: 22px;
+    font-weight: 600px;
 }
 
-.card-title h3, h3.card-title {
+/* .card-title h3, h3.card-title {
     margin: 0;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600px;
     text-align: center;
     font-family: var(--titles);
     padding: 10px;
     margin-bottom: 20px;
 
-}
+} */

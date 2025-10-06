@@ -10,10 +10,10 @@ function ProjectCard ({project}) {
             >
                 <div className="card">
                     <img src={project.cover} alt={project.title} className="card-image"/>
-                    <div className ="card-title">
-                        <h3 className="card-title">{project.title}</h3>
-                        </div>
-                </div>
+                       </div>
+                         <>
+                            <h3 className="card-title">{project.title}</h3>
+                </>
             </Link>
     )
 }
