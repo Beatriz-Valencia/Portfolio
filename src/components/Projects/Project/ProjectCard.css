@@ -23,13 +23,13 @@
 
 .card-image {
     position: absolute;
-    inset: 1;
+    inset: 0;
     /* Top, right, bottom, left = 0 → ocupa todo el contenedor */
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-
+   
 }
 
 .card-title {
@@ -42,16 +42,15 @@
     padding: 12px 12px;
     font-family: var(--titles);
     font-size: 22px;
-    font-weight: 600px;
+    font-weight: 600;
 }
 
-/* .card-title h3, h3.card-title {
-    margin: 0;
-    font-size: 20px;
-    font-weight: 600px;
-    text-align: center;
-    font-family: var(--titles);
-    padding: 10px;
-    margin-bottom: 20px;
+.card--md .card-image,
+.card--sm .card-image {
+  object-fit: contain;   /*imagen completa dentro del card*/
+}
 
-} */
+.card--lg, .card--md, .card--sm {
+    --img-inset: 0%;
+}
+
