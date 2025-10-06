@@ -1,4 +1,4 @@
-const projects = [
+const project = [
     {
         "id": "01",
         "title": "GENERATOR OF PRESENTATIONS APPLICATION",
@@ -42,4 +42,4 @@ const projects = [
     },
 ];
 
-export default projects;
+export default project;

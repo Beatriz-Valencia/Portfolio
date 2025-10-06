@@ -35,7 +35,6 @@ export default function ProjectDetail () {
                     src={project.images}
                     className="detail-image"
                 />
-                
                 </div>    
             <div className = "detail-actions">
                 <button onClick={() => navigate(-1)} className="button-navigate"> Volver</button>
