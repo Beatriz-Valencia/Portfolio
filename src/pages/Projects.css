@@ -1,6 +1,11 @@
+.background {
+    background: var(--white);
+}
+
+
 .projects-container {
 max-width: 1200px;
-margin_:0 auto;
+margin:0 auto;
 padding: 24px;
 }
 
@@ -10,13 +15,32 @@ padding: 24px;
 
 .projects-title {
     font-size: 32px;
-    line-height: 1.2;
+    line-height: 1.8;
     margin: 0;
+    font-family: var(--titles);
+    text-align: center;
+    
+    
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeta(auto-fit, minmax(260px, 1fr));
-    gap:32px;
+    grid-template-columns: repeat(2, 1fr);
+    gap:50px;
     align-items: start;
+}
+
+
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+}
+
+@media (max-width: 640px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap:20px;
+    }
 }

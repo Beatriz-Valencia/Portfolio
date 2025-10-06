@@ -8,13 +8,14 @@
 }
 
 .card {
+    margin-top: 25px;
     position: relative;
     width: 100%;
     aspect-ratio: 1/1;
-    border: 1px solid #0F0E0E;
+    border: 1px solid var(--black);
     border-radius: 12px;
     overflow: hidden;
-    background: #EEEEEE;
+    background: var(--white);
  
 }
 
@@ -25,6 +26,7 @@
     height: 100%;
     object-fit: cover;
     display: block;
+    
 }
 
 .card-title {
@@ -32,12 +34,16 @@
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 12px 12px;
+    /* padding: 12px 12px; */
 }
 
 .card-title h3, h3.card-title {
     margin: 0;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 600px;
     text-align: center;
+    font-family: var(--titles);
+    padding: 10px;
+    margin-bottom: 20px;
+
 }
