@@ -1,0 +1,22 @@
+.projects-container {
+max-width: 1200px;
+margin_:0 auto;
+padding: 24px;
+}
+
+.projects-header {
+    margin-bottom: 24px;
+}
+
+.projects-title {
+    font-size: 32px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeta(auto-fit, minmax(260px, 1fr));
+    gap:32px;
+    align-items: start;
+}

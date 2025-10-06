@@ -1,0 +1,43 @@
+/*Enlace que envuelve la tarjeta*/
+.card-link {
+    display: block; /*se comporta como bloque*/
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit; /*Hereda el color el del texto del contenedor*/
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border: 1px solid #0F0E0E;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #EEEEEE;
+ 
+}
+
+.card-image {
+    position: absolute;
+    inset:1; /* Top, right, bottom, left = 0 → ocupa todo el contenedor */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-title {
+    position: absolute; /*pegado al borde inferior de la tarjeta*/
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 12px 12px;
+}
+
+.card-title h3, h3.card-title {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600px;
+    text-align: center;
+}
