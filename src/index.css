@@ -12,11 +12,23 @@
   /*TIPOGRAFÍASs*/
   --titles: 'Roboto', 'Helvetica Neue', Helvetica;
   --text: 'EB Garamond', Garamond;
+
+
+  min-height: 100vh;
+  height: 100%;
+  background: none;
+  border:none;
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
+  background: none;
+  border: none;
+  min-height: 100vh;
+  width: 100vw;
   height: 100%;
+  box-sizing: border-box;
+
 }

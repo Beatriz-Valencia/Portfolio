@@ -10,7 +10,6 @@ import ProjectDetail from "./components/Projects/ProjectDetail";
 //import Footer from "./components/Footer";
 //import Button from "./components/Button";
 //import Input from "./components/Input";
-import projects from "./data/data";
 
 
 function App() {

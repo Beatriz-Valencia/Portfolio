@@ -10,10 +10,6 @@ function toYoutubeEmbed(url) {
             const id = u.searchParams.get("v"); //extrae parámetro v (id del video)
             return id? `https://www.youtube.com/embed/${id}` :url;  //devuelve URL /embed/ID   
         }
-        // if (u.hostname.includes("youtu.be")){
-        //     const id = u.pathname.replace("/", "");
-        //     return id? `https://www.youtube.com/embed/${id}` :url // devuelve URL embedebible
-        // }
     }
         catch(e) {
             return url;
@@ -26,17 +22,9 @@ export default function ProjectDetail () {
     const project = data.find((p) => String(p.id) === String(id));
     return (
         <section className="detail-container">
-            <div className = "detail-actions">
-                <button onClick={() => navigate(-1)} className="button-navigate"> Volver</button>
-                <a href={project.youtubeUrl}
-                target="_blank"
-                className="button-youtube"
-                >Ver Demo</a>
-            </div>
-
-            <h2 className="detail-title">{project.title}</h2>
-                {project.shortDescription && (
-                    <p className ="detail-description">{project.shortDescription}</p>
+             <h2 className="detail-title">{project.title}</h2>
+                {<data value="" className="description"></data> && (
+                    <p className ="detail-description">{project.description}</p>
                 )}
                 
                 <div className="video">
@@ -48,7 +36,16 @@ export default function ProjectDetail () {
                     className="detail-image"
                 />
                 
-                </div>     
+                </div>    
+            <div className = "detail-actions">
+                <button onClick={() => navigate(-1)} className="button-navigate"> Volver</button>
+                <a href={project.youtubeUrl}
+                target="_blank"
+                className="button-youtube"
+                >Ver Demo</a>
+            </div>
+
+            
         </section>
     )
 }
