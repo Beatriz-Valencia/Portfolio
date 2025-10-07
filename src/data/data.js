@@ -6,7 +6,7 @@ const project = [
         "cover": "/images/narraTexto-cover.png",
         "images": "/images/narraTexto-img-1.png",
         // "youtubeUrl": "https://youtu.be/9vzpnKb9Y_8",
-        "youtubeUrl": "/images/Demo-narraTexto.mp4",
+        "youtubeUrl": "/images/Demo-narraTexto-actualizada.mp4",
         "size":"sm"
     },
 
@@ -17,7 +17,7 @@ const project = [
          "cover": "/images/metricasAudiencia-cover.png",
         "images": "/images/metricasAudiencia-img-1.png",
         // "youtubeUrl": "https://youtu.be/MCTZkbKMdsI",
-        "youtubeUrl": "Demo-metricasAudiencia.mp4",
+        "youtubeUrl": "/images/Demo-metricasAudiencia-actualizada.mp4",
         "size": "md"
 
     },
@@ -29,7 +29,7 @@ const project = [
          "cover": "/images/patitas-img-cover.png",
         "images": "/images/patitas-img-1.png",
         // "youtubeUrl": "https://youtu.be/IVI2gf4T08s",
-        "youtubeUrl": "/images/Demo-Patitas Conectadas.mp4",
+        "youtubeUrl": "/images/Demo-Patitas-Conectadas-actualizada.mp4",
         "size":"sm"
 
     },
@@ -41,7 +41,7 @@ const project = [
          "cover": "/images/akibaMart-img-1.png",
         "images": "/images/akibaMart-img-2.png",
         // "youtubeUrl": "https://youtu.be/7sjoNKHQ3LQ",
-        "youtubeUrl" : "/images/Demo-Akiba-Mart.mp4",
+        "youtubeUrl" : "/images/Demo-Akiba-Mart-actualizada.mp4",
         "size":"md"
     },
 ];
