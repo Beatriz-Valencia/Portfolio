@@ -5,7 +5,7 @@
     align-items: center; /*centra horizontalmente*/
     justify-content: flex-start; /*centra verticalmente*/
     text-align: center;
-    background:  color-mix(in srgb, var(--black) 3%, transparent);
+    background:  color-mix(in srgb, var(--black) 10%, transparent);
     
 }
 
