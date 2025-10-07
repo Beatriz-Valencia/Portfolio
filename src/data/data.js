@@ -41,7 +41,7 @@ const project = [
          "cover": "/images/akibaMart-img-1.png",
         "images": "/images/akibaMart-img-2.png",
         // "youtubeUrl": "https://youtu.be/7sjoNKHQ3LQ",
-        "youtubeUrl" : "/images/Demo-Akiba-Mart-actualizada.mp4",
+        "youtubeUrl" : "/images/Demo-Akiba-Mart-actualizada2.mp4",
         "size":"md"
     },
 ];
