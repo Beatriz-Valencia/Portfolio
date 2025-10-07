@@ -10,6 +10,11 @@ function toYoutubeEmbed(url) {
             const id = u.searchParams.get("v"); //extrae parámetro v (id del video)
             return id? `https://www.youtube.com/embed/${id}` :url;  //devuelve URL /embed/ID   
         }
+        if (u.hostname === "youtu.be") {
+            const id = u.pathname.slice(1); //quita la barra inicial
+            return id ? `https://www.youtube.com/embed/${id}` :url;
+        }
+        return url;
     }
         catch(e) {
             return url;

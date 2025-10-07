@@ -5,7 +5,7 @@
     align-items: center; /*centra horizontalmente*/
     justify-content: flex-start; /*centra verticalmente*/
     text-align: center;
-    background: var(--white);
+    background:  color-mix(in srgb, var(--black) 3%, transparent);
     
 }
 
@@ -42,7 +42,7 @@
     max-width: 560px;
     height: 315px;
     display: block;
-    margin: 0 auto;
+    margin: 30px;
     background: none;
 }
 
@@ -58,7 +58,7 @@
 }
 
 .detail-image {
-    max-width: 400px;
+    max-width: 350px;
 }
 
 .detail-description,

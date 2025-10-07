@@ -37,7 +37,7 @@ const project = [
         "description": "E-commerce platform focused on selling manga comics across different categories. The project includes a frontend application developed in React and a complete backend built with Node.js, Express, and MongoDB. The application features user registration and authentication, product management, categories and filters, shopping cart, and order handling.",
          "cover": "/images/akibaMart-img-1.png",
         "images": "/images/akibaMart-img-2.png",
-        "youtubeUrl": "https://youtu.be/vPM1paKWh2I",
+        "youtubeUrl": "https://youtu.be/7sjoNKHQ3LQ",
         "size":"md"
     },
 ];
