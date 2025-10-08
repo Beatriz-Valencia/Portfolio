@@ -42,7 +42,7 @@ export default function ProjectDetail() {
         </div>
         <div className="detail-description">
             <span>{project.description}</span>
-            <button onClick={()=> navigate(-1)} className="button-navigate">
+            <button onClick={()=> navigate("/projects")} className="button-navigate">
                 Return to projects
             </button>
         </div>
