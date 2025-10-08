@@ -1,17 +1,18 @@
 .detail-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+        "title video"
+        "tablet description";
+    gap: 20px;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /*centra horizontalmente*/
-    justify-content: flex-start; /*centra verticalmente*/
-    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
     background:  color-mix(in srgb, var(--black) 10%, transparent);
     
 }
 
-/* .stack {
-    margin-top: 24px;
-} */
 
 .detail-title {
  font-family: var(--titles);
