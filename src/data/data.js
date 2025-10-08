@@ -23,7 +23,7 @@ const project = [
         "description": "Social network specially designed for pets. Each pet can have its own profile, share its thoughts in the form of posts, comments or likes on what their furry friends are doing, and build their own online community.",
          "cover": "/images/patitas-img-cover.png",
         "images": "/images/patitas-img-1.png",
-        "videoPath": "/images/Demo-Patitas-Conectadas-actualizada.mp4",
+        "videoPath": "/images/Demo-Patitas-Conectadas-actualizada2.mp4",
     },
 
     {
