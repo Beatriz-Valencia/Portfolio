@@ -25,7 +25,7 @@ const project = [
         "description": "Social network specially designed for pets. Each pet can have its own profile, share its thoughts in the form of posts, comments or likes on what their furry friends are doing, and build their own online community.",
          "cover": "/images/patitas-img-cover.png",
         "images": "/images/patitas-img-1.png",
-        "technologies": ["HTML", "CSS", "JavaScript", "React", "Redux", "Node", "Express", "MongoDB", "Postman", "Swagger"],
+        "technologies": ["JavaScript", "React", "Redux", "Node", "MongoDB", "Postman", "Swagger"],
         "videoPath": "/images/Demo-Patitas-Conectadas-actualizada2.mp4",
     },
 
@@ -35,7 +35,7 @@ const project = [
         "description": "E-commerce platform focused on selling manga comics across different categories. The project includes a frontend application developed in React and a complete backend built with Node.js, Express, and MongoDB. The application features user registration and authentication, product management, categories and filters, shopping cart, and order handling.",
         "cover": "/images/akibaMart-img-1.png",
         "images": "/images/akibaMart-img-2.png",
-        "technologies":["HTML", "CSS", "JavaScript", "React", "Node", "Express", "MongoDB", "Postman"],
+        "technologies":["CSS", "JavaScript", "React", "Node", "Express", "MongoDB", "Postman"],
         "videoPath" : "/images/Demo-Akiba-Mart-actualizada3.mp4",
     },
 ];

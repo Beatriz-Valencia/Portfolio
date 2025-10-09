@@ -1,7 +1,7 @@
 .detail-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto  1fr;
+    grid-template-rows: auto min-content 1fr;
     grid-template-areas:
         "title video"
         "tablet techs"
@@ -77,7 +77,7 @@
 }
 
 /*fila de chips*/
-.tech-list{
+.tech-list {
     display:flex;
     gap:10px;
     margin:0;
@@ -86,17 +86,19 @@
     flex-wrap: nowrap; /*para una sola fila*/
     overflow-x: auto;
     white-space: nowrap;
+   
 }
 
 .tech-chip {
-    display: inline-flex;
+    display: inline-flex; /*REVISAR*/
     align-items: center;
     gap: 6px;
     padding: 6px 10px;
-    border-radius: 999px;
+    border-radius:999px;
     font-size: 12px;
-    border: 1px solid rgba (255,255,255,.25);
-    background: color-mix(in srgb, var(--black) 20%, transparent);
+    border: 1px solid rgba(255,255,255,.25);
+    background: color-mix(in srgb, var(--black) 10%, transparent);
+    
 }
 
 
@@ -135,12 +137,17 @@
         grid-template-rows: auto;
         grid-template-areas:
             "title"
+            "techs"
             "description"
             "video"
-            "tablet"
-            ;
+            "tablet";
         gap: 20px;
         padding: 20px;
+    }
+
+    .techs {
+        justify-self: stretch;
+        text-align:center;
     }
 
     .detail-title,
