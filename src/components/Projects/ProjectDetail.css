@@ -1,9 +1,10 @@
 .detail-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto auto  1fr;
     grid-template-areas:
         "title video"
+        "tablet techs"
         "tablet description";
     gap: 20px;
     min-height: 100dvh;
@@ -69,6 +70,35 @@
     height: auto;
 }
 
+.techs {
+    grid-area: techs;
+    align-self: end;
+    justify-self: end;
+}
+
+/*fila de chips*/
+.tech-list{
+    display:flex;
+    gap:10px;
+    margin:0;
+    padding:0;
+    list-style: none;
+    flex-wrap: nowrap; /*para una sola fila*/
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.tech-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    border: 1px solid rgba (255,255,255,.25);
+    background: color-mix(in srgb, var(--black) 20%, transparent);
+}
+
 
 .detail-description {
     grid-area: description;
@@ -96,6 +126,7 @@
     padding: 8px 12px;
     z-index: 1;
 }
+
 
 /*MEDIA QUERIES TABLET*/
 @media (max-width: 900px) {
