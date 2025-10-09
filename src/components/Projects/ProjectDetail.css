@@ -34,8 +34,8 @@
     align-self: start;
     justify-self: end;
     width: 100%;
-    max-width: 630px;
-    max-height: 430px;
+    max-width: 750px;
+    max-height: 550px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,8 +44,8 @@
 
 .video-element {
     width: 100%;
-    max-width: 630px;
-    max-height: 430px;
+    max-width: 750px;
+    max-height: 550px;
     height: auto;
     display: block;
     background: none;

@@ -1,7 +1,7 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
-//import Profile from "./pages/Profile";
+import Profile from "./pages/Profile";
 import Projects from "./pages/Projects";
 //import Contact from "./pages/Contact";
 import ProjectDetail from "./components/Projects/ProjectDetail";
@@ -22,8 +22,8 @@ function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/project/:id" element={<ProjectDetail/>}/>
-              {/* <Route path="/profile" element={<Profile />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route path="/profile" element={<Profile />}/>
+              {/* <Route path="/contact" element={<Contact />} /> 
               <Route path="/Button" element={<Button />} />
               <Route path="Input" element={<Input />} />*/}
             </Routes>
