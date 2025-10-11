@@ -5,7 +5,7 @@ export default function Profile() {
   return (
     <section className="profile">
      
-      <h3 className="text">
+      <h3 className="textProfile">
         <p>
         I’ve spent over a decade leading design and construction projects in London — at iconic venues such as the British Library, 
      the Natural History Museum, and the Royal Opera House — and I’m now pivoting my career in Spain to focus on what I enjoy most: 

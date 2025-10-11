@@ -18,17 +18,50 @@
     object-fit: cover;
     border-radius: 4px;
     filter: grayscale;
-    box-shadow: 0 10px 30px rgba(0,0,0,.08);
-   
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+
 }
 
-.text {
+.textProfile {
     grid-area: text;
     max-width: 62ch;
     font-weight: 400;
     line-height: 1.75;
     font-size: clamp(16px, 1.1vw + 12px, 20px);
-    font-family:var(--text);
+    font-family: var(--text);
     color: var(--black);
     margin: 0;
+}
+
+
+/*RESPONSIVE MAX WIDTH 480px*/
+@media (max-width: 480px) {
+    .profile {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "photo" 
+            "textProfile"
+        ;
+        padding: clamp(5px, 2vw, 10px);
+        gap: clamp(10px, 2vw, 16px);
+        box-sizing: border-box;
+        /*evita desbordes por padding*/
+    }
+
+
+
+    .profile img {
+        grid-area: photo;
+        display: block;
+        height: auto;
+        width: 100%;
+        object-fit:cover;
+        
+    }
+
+    .textProfile {
+        grid-area: textProfile;
+        min-width: 0;
+    }
 }
