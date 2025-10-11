@@ -1,0 +1,34 @@
+.profile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "photo text";
+    gap: clamp(24px, 4vw, 72px);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: clamp(16px, 4vw, 48px);
+    align-items: start;
+    background: (--white);
+    padding-top: clamp(84px, 13vh, 144px);
+}
+
+.profile img {
+    grid-area: photo;
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
+    border-radius: 4px;
+    filter: grayscale;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+   
+}
+
+.text {
+    grid-area: text;
+    max-width: 62ch;
+    font-weight: 400;
+    line-height: 1.75;
+    font-size: clamp(16px, 1.1vw + 12px, 20px);
+    font-family:var(--text);
+    color: var(--black);
+    margin: 0;
+}
