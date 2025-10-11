@@ -33,6 +33,34 @@
     margin: 0;
 }
 
+/*RESPONSIVE MAX WIDTH 900px*/
+@media (max-width: 900px) {
+    .profile {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "photo textProfile";
+        align-items: start;
+        padding: clamp(80px, 10vw, 120px);
+        gap: clamp(16, 4vw, 32px);
+        box-sizing: border-box;
+    }
+
+    .profile img {
+        grid-area: photo;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin-top: 15rem;
+    }
+
+    .textProfile {
+        grid-area: textProfile;
+        min-width: 0;
+        /*es un seguro para grid y flex que evita que una columna con texto largo o contenido ancho empuje y rompa el layout*/
+    }
+}
+
+
 
 /*RESPONSIVE MAX WIDTH 480px*/
 @media (max-width: 480px) {
@@ -40,9 +68,8 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-areas:
-            "photo" 
-            "textProfile"
-        ;
+            "photo"
+            "textProfile";
         padding: clamp(5px, 2vw, 10px);
         gap: clamp(10px, 2vw, 16px);
         box-sizing: border-box;
@@ -56,12 +83,15 @@
         display: block;
         height: auto;
         width: 100%;
-        object-fit:cover;
-        
+        object-fit: cover;
+        /*REVISAR*/
+
     }
 
     .textProfile {
         grid-area: textProfile;
         min-width: 0;
     }
+
+
 }
