@@ -6,7 +6,8 @@ import "./Connect.css";
 const Connect = () => {
   const navigate = useNavigate();
 
-  const [formData, setformData] = useState ({
+//guardamos lo que el usuario escribe
+  const [formData, setFormData] = useState ({
     name:"",
     email:"",
     phone:"",
@@ -15,9 +16,9 @@ const Connect = () => {
 //Estado para guardar errores
   const [error, setError] = useState("");
 
-  //Manejo de cambios
+  //Manejo de cambios, actualiza el estado al escribir
   const handleChange = (e) => {
-    setformData ({
+    setFormData ({
       ...formData,
       [e.target.name] : e.target.value, //actualizamos el campo que cambió
     });
@@ -29,7 +30,7 @@ const Connect = () => {
 
   //Verificación de campos no vacíos
 if (!formData.name || !formData.email || !formData.message) {
-  setError ("Por favor, completa los campos obligatorios");
+  setError ("Please, complete the form");
   return
 }
 setError("");
@@ -37,39 +38,91 @@ setError("");
 //Construimos el mailto 
 const to="beconpe.enquiries@gmail.com";
 const subject = `Nuevo mensaje de ${formData.name}`;
-const bodyLine = [
+const bodyLines = [
   `Nombre: ${formData.name}`,
   `Email: ${formData.email}`,
-  `Teléfono: ${formData.email}`,
+  `Teléfono: ${formData.phone}`,
   "",
-  "Mensaje;", formData.message,
+  "Mensaje:", formData.message,
 ]
 const body = bodyLines.join("\n");
 
 //Codificamos la URL mailto
 
-const href =`mailto:${to}?subject=${encodeURIComponent}(subject)`&body=${encondeURIComponent(body)};
+const href =`mailto:${to}?subject=${encodeURIComponent}(subject)&body=${encondeURIComponent(body)}`;
 
 //Abrimos el cliente de correo con el mensaje pre-rellenado
 window.location.href= href;
+// navigate
 
 //Render del formulario
 return (
   <div className="connect_background">
     <div className="connect_container">
       <h3>LET'S START THE CONVERSATION</h3>
+
+    <form onSubmit={handleSubmit} className="connect_form">
+    {/*Nombre*/}
+  <input 
+    className="form"
+    type="text"
+    name="name"
+    placeholder="NAME*"
+    value={formData.name}
+    onChange={handleChange}
+    required
+    />
+
+    {/*Email*/}
+    <input 
+      className="form"
+      type="email"
+      name="email"
+      placeholder="EMAIL*"
+      value={formData.email}
+      onChange={handleChange}
+      required
+      />
+
+      {/*Teléfono, opcional*/}
+      <input
+      className="form"
+      type="tel"
+      name="phone"
+      placeholder="TELEPHONE*"
+      value= {formData.phone}
+      onChange= {handleChange}
+      />
+
+      {/*Mensaje*/}
+      <textarea 
+      className="form-textarea"
+      name="message"
+      placeholder="MESSAGE*"
+      value={formData.message}
+      onChange={handleChange}
+      required
+      />
+
+      <button type="submit" className="connect_button">SUBMIT</button>
+  
+      </form>
+
+      {/*Fallback: si JS está desactivado, se muestra un link mailto simple*/}
+      <noscript>
+        <p>
+          JavaScript is not available. You can write me directly at {" "}
+          <a href="mailto:beconpe.enquiries@gmail.com?subject=Connect%20from%20web">
+            beconpe.enquiries@gmail.com
+          </a>
+        </p>
+      </noscript>
     </div>
   </div>
 )
-
-
   }
 
-
-
-
-
-
-
 }
+
+export default Connect;
 
