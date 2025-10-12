@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import Input from "../components/Input";
 import "./Connect.css";
 
@@ -56,7 +56,7 @@ const Connect = () => {
 
     //Abrimos el cliente de correo con el mensaje pre-rellenado
     window.location.href = href;
-    navigate("/thanks");
+    // navigate("/thanks");
   };
     //Render del formulario
     return (
@@ -101,7 +101,7 @@ const Connect = () => {
             <textarea
               className="form-textarea"
               name="message"
-              placeholder="MESSAGE*"
+              placeholder="HOW CAN I HELP YOU*"
               value={formData.message}
               onChange={handleChange}
               required

@@ -5,7 +5,7 @@ import Profile from "./pages/Profile";
 import Projects from "./pages/Projects";
 import Connect from "./pages/Connect";
 import ProjectDetail from "./components/Projects/ProjectDetail";
-import Thanks from "./pages/Thanks";
+// import Thanks from "./pages/Thanks";
 //import { ProjectProvider } from "./context/ProjectContext/ProjectState";
 //import Header from "./components/Header";
 //import Footer from "./components/Footer";
@@ -24,7 +24,7 @@ function App() {
           <Route path="/project/:id" element={<ProjectDetail />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/connect" element={<Connect />} />
-          <Route path="/thanks" element={<Thanks/>} />
+          {/* <Route path="/thanks" element={<Thanks/>} /> */}
           {/*<Route path="/Button" element={<Button />} />*/}
           <Route path="Input" element={<Input />} />
         </Routes>
