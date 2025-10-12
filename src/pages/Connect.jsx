@@ -1,26 +1,26 @@
-import {useState} from "react";
-import {useNavigate} from "react-router-dom";
-import Input from "../components/Input"
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Input from "../components/Input";
 import "./Connect.css";
 
 const Connect = () => {
   const navigate = useNavigate();
 
-//guardamos lo que el usuario escribe
-  const [formData, setFormData] = useState ({
-    name:"",
-    email:"",
-    phone:"",
-    message:""
+  //guardamos lo que el usuario escribe
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
   });
-//Estado para guardar errores
+  //Estado para guardar errores
   const [error, setError] = useState("");
 
   //Manejo de cambios, actualiza el estado al escribir
   const handleChange = (e) => {
-    setFormData ({
+    setFormData({
       ...formData,
-      [e.target.name] : e.target.value, //actualizamos el campo que cambió
+      [e.target.name]: e.target.value, //actualizamos el campo que cambió
     });
   };
 
@@ -28,101 +28,102 @@ const Connect = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-  //Verificación de campos no vacíos
-if (!formData.name || !formData.email || !formData.message) {
-  setError ("Please, complete the form");
-  return
-}
-setError("");
+    //Verificación de campos no vacíos
+    if (!formData.name || !formData.email || !formData.message) {
+      setError("Please, complete the form");
+      return;
+    }
+    setError("");
 
-//Construimos el mailto 
-const to="beconpe.enquiries@gmail.com";
-const subject = `Nuevo mensaje de ${formData.name}`;
-const bodyLines = [
-  `Nombre: ${formData.name}`,
-  `Email: ${formData.email}`,
-  `Teléfono: ${formData.phone}`,
-  "",
-  "Mensaje:", formData.message,
-]
-const body = bodyLines.join("\n");
+    //Construimos el mailto
+    const to = "beconpe.enquiries@gmail.com";
+    const subject = `Nuevo mensaje de ${formData.name}`;
+    const bodyLines = [
+      `Nombre: ${formData.name}`,
+      `Email: ${formData.email}`,
+      `Teléfono: ${formData.phone}`,
+      "",
+      "Mensaje:",
+      formData.message,
+    ];
+    const body = bodyLines.join("\n");
 
-//Codificamos la URL mailto
+    //Codificamos la URL mailto
 
-const href =`mailto:${to}?subject=${encodeURIComponent}(subject)&body=${encondeURIComponent(body)}`;
+    const href = `mailto:${to}?subject=encodeURIComponent(subject)&body=${encodeURIComponent(
+      body
+    )}`;
 
-//Abrimos el cliente de correo con el mensaje pre-rellenado
-window.location.href= href;
-// navigate
+    //Abrimos el cliente de correo con el mensaje pre-rellenado
+    window.location.href = href;
+    navigate("/thanks");
+  };
+    //Render del formulario
+    return (
+      <div className="connect_background">
+        <div className="connect_container">
+          <h3>LET'S START THE CONVERSATION</h3>
 
-//Render del formulario
-return (
-  <div className="connect_background">
-    <div className="connect_container">
-      <h3>LET'S START THE CONVERSATION</h3>
+          <form onSubmit={handleSubmit} className="connect_form">
+            {/*Nombre*/}
+            <input
+              className="form"
+              type="text"
+              name="name"
+              placeholder="NAME*"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
 
-    <form onSubmit={handleSubmit} className="connect_form">
-    {/*Nombre*/}
-  <input 
-    className="form"
-    type="text"
-    name="name"
-    placeholder="NAME*"
-    value={formData.name}
-    onChange={handleChange}
-    required
-    />
+            {/*Email*/}
+            <input
+              className="form"
+              type="email"
+              name="email"
+              placeholder="EMAIL*"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
 
-    {/*Email*/}
-    <input 
-      className="form"
-      type="email"
-      name="email"
-      placeholder="EMAIL*"
-      value={formData.email}
-      onChange={handleChange}
-      required
-      />
+            {/*Teléfono, opcional*/}
+            <input
+              className="form"
+              type="tel"
+              name="phone"
+              placeholder="TELEPHONE*"
+              value={formData.phone}
+              onChange={handleChange}
+            />
 
-      {/*Teléfono, opcional*/}
-      <input
-      className="form"
-      type="tel"
-      name="phone"
-      placeholder="TELEPHONE*"
-      value= {formData.phone}
-      onChange= {handleChange}
-      />
+            {/*Mensaje*/}
+            <textarea
+              className="form-textarea"
+              name="message"
+              placeholder="MESSAGE*"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            />
 
-      {/*Mensaje*/}
-      <textarea 
-      className="form-textarea"
-      name="message"
-      placeholder="MESSAGE*"
-      value={formData.message}
-      onChange={handleChange}
-      required
-      />
+            <button type="submit" className="connect_button">
+              SUBMIT
+            </button>
+          </form>
 
-      <button type="submit" className="connect_button">SUBMIT</button>
-  
-      </form>
-
-      {/*Fallback: si JS está desactivado, se muestra un link mailto simple*/}
-      <noscript>
-        <p>
-          JavaScript is not available. You can write me directly at {" "}
-          <a href="mailto:beconpe.enquiries@gmail.com?subject=Connect%20from%20web">
-            beconpe.enquiries@gmail.com
-          </a>
-        </p>
-      </noscript>
-    </div>
-  </div>
-)
-  }
-
-}
+          {/*Fallback: si JS está desactivado, se muestra un link mailto simple*/}
+          <noscript>
+            <p>
+              JavaScript is not available. You can write me directly at{" "}
+              <a href="mailto:beconpe.enquiries@gmail.com?subject=Connect%20from%20web">
+                beconpe.enquiries@gmail.com
+              </a>
+            </p>
+          </noscript>
+        </div>
+      </div>
+    );
+  };
 
 export default Connect;
-
