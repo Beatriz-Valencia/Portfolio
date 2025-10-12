@@ -4,7 +4,7 @@ import Input from "../components/Input";
 import "./Connect.css";
 
 const Connect = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   //guardamos lo que el usuario escribe
   const [formData, setFormData] = useState({
@@ -66,31 +66,26 @@ const Connect = () => {
 
           <form onSubmit={handleSubmit} className="connect_form">
             {/*Nombre*/}
-            <input
-              className="form"
-              type="text"
+            <Input
               name="name"
+              label="NAME"
+              required
               placeholder="NAME*"
               value={formData.name}
               onChange={handleChange}
-              required
             />
 
             {/*Email*/}
-            <input
-              className="form"
-              type="email"
+            <Input
               name="email"
+              required
               placeholder="EMAIL*"
               value={formData.email}
               onChange={handleChange}
-              required
             />
 
             {/*Teléfono, opcional*/}
-            <input
-              className="form"
-              type="tel"
+            <Input
               name="phone"
               placeholder="TELEPHONE*"
               value={formData.phone}
@@ -98,15 +93,18 @@ const Connect = () => {
             />
 
             {/*Mensaje*/}
+            <label className="field" htmlFor="message">
+              <div className="field_textarea_container">
             <textarea
-              className="form-textarea"
               name="message"
-              placeholder="HOW CAN I HELP YOU*"
               value={formData.message}
               onChange={handleChange}
+              className="field_textarea_container"
+              placeholder="HOW CAN I HELP YOU*"
               required
             />
-
+            </div>
+            </label>
             <button type="submit" className="connect_button">
               SUBMIT
             </button>

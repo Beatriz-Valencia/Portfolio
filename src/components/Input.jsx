@@ -6,6 +6,7 @@ export default function Input ({
     value,
     onChange,
     autoComplete="off",
+    placeholder="",
 
 }) {
     const id =name;
@@ -25,6 +26,7 @@ export default function Input ({
         value={value}
         onChange={onChange}
         autoComplete={autoComplete}
+        placeholder={placeholder}
         />
         </label>
 
