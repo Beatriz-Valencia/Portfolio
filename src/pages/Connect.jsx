@@ -2,6 +2,7 @@ import { useState } from "react";
 // import { useNavigate } from "react-router-dom";
 import Input from "../components/Input";
 import "./Connect.css";
+import Button from "../components/Button";
 
 const Connect = () => {
   // const navigate = useNavigate();
@@ -105,9 +106,8 @@ const Connect = () => {
             />
             </div>
             </label>
-            <button type="submit" className="connect_button">
-              SUBMIT
-            </button>
+
+            <Button type="submit" label="[SUBMIT]"/>
           </form>
 
           {/*Fallback: si JS está desactivado, se muestra un link mailto simple*/}
