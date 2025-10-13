@@ -1,9 +1,10 @@
 /*Home.jsx*/
 .home {
     --scalableText: clamp(6px, 1vw, 14px);
-    --gap-text-wordmark: clamp(6px, 1.2vw, 14px);
+    --gap-text-wordmark: clamp(4px, 1.2vw, 10px);
     --gap-text-wordmark-mobile: clamp(1px, 0.2vw, 3px);
     
+    height: 100%;
     min-height: 100vh;
     min-height: 100dvh;
     min-height: 100svh;
@@ -11,6 +12,8 @@
     margin: 0 auto;
     padding: var(--scalableText);
     display: grid;
+
+    overflow:hidden;
 
     grid-template-columns: 1.1fr 0.9fr;
     grid-template-rows: auto auto 1fr auto var(--gap-text-wordmark) auto;
@@ -23,6 +26,7 @@
         ".           ."
         /*fila espaciadora*/
         "wordmark image";
+    padding: clamp (8px, 1.2vw, 16px);
     column-gap: clamp(6px, 1vw, 14px);
     padding-block: clamp(2px, 0.6vh, 4px);
     row-gap: 0;
@@ -77,9 +81,9 @@
 
 .text {
     margin: clamp(8px, 1.4vw, 14px) 0 0;
-    max-width: 52ch;
+    max-width: 58ch;
     font-family: var(--text);
-    font-size: clamp(16px, 1.6vw, 20px);
+    font-size: clamp(12px, 1.2vw, 14px);
     line-height: 1.35;
     color: (--black);
 
@@ -100,12 +104,16 @@
 }
 
 .home img {
-    margin: 8px 0 16px 8px;
+    /* margin: 8px 0 16px 8px;
     margin-right: 0px;
     margin-bottom: 20px;
-    padding-left:0;
+    padding-left:0; */
+    margin: 0;
+    margin-inline-end: var(--scalableText);
+    margin-block-end: var(--scalableText);
     grid-area: image;
-    width: clamp(220px, 32vw, 380px);
+    margin-bottom: var(--scalableText);
+    width: clamp(140px, 19vw, 250px);
     aspect-ratio: 3/4;
     object-fit: cover;
     /* Rellena el contenedor recortando lo sobrante sin deformar */
