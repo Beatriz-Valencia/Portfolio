@@ -12,7 +12,8 @@
     padding: 32px;
     box-sizing: border-box;
     overflow: hidden;
-    background: color-mix(in srgb, var(--black) 10%, transparent);
+    /* background: color-mix(in srgb, var(--black) 10%, transparent); */
+    background: var(--white);
 
 }
 
