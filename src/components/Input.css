@@ -1,11 +1,11 @@
 .field {
-    display:block; 
+    display: block;
     width: 100%;
 }
 
 .field_label {
-    display:block;
-    font-family: (--titles);
+    display: block;
+    font-family: var(--titles);
     font-size: clamp(16px, 1.4vw, 22px);
     letter-spacing: .28em;
     color: var(--black);
@@ -13,11 +13,24 @@
     margin-bottom: 8px;
 
 }
-      
+
 
 .field_input {
     width: 100%;
-    background: transparent;
+    background: var(--white);
+    border: none;
+    border-bottom: 0.5px solid var(--connect-line);
     color: var(--black);
     padding: 6px 0 10px;
+    font-family: var(--text);
+    line-height: 1.6;
+    box-shadow: 0 1px var(--connect-line);
+    box-sizing: border-box;
+   
+}
+
+.field_input::placeholder {
+    color: color-mix(in srgb, var(--black) 50%, transparent);
+    font-size: 16px;
+
 }

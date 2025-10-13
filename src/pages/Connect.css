@@ -28,44 +28,57 @@
     margin: 0 0 clamp(36pc, 8vhy, 72px);
     font-size: 28px;
     font-weight: 400;
+    text-align:center;
 }
 
 .connect_form {
     width: 100%;
-    max-width: 980px;
+    max-width: 580px;
     margin-inline: auto;
     /*centrado horizontalmente en el contenedor*/
     display: grid;
-    gap: var(--connect-line);
+    gap: var(--connect-field-gap);
+    text-align: center;
 
 }
 
-.field,
-.field_label,
+
+
 .field_textarea_container,
-.field_input,
 .field_textarea {
     width: 100%;
     border: none;
     background: var(--white);
+    font-family: var(--titles);
 
-    font-family: (--titles);
-    line-height: 1.6;
-    min-height: 140px;
-    /*altura mínima para el textarea*/
-    padding: 6px 0 10px;
+
     outline: none;
     caret-color: var(--black);
     /*color del cursor de texto*/
+}
 
 
+.field_textarea {
+    min-height: 140px;
+    resize: vertical;
+    width: 100%;
+    background: var(--white);
+    border: none;
+    border-bottom: 1px solid var(--connect-line);
+    color: var(--black);
+    padding: 6px 0 10px;
+    border-bottom: 1px solid var(--connect-line);
+    box-shadow: 0 1px var(--connect-line);
+    min-height: 140px;
+    /*altura mínima para el textarea*/
+    padding: 6px 0 10px;
+    line-height: 1.6;
+    text-align: center;
 
 }
 
-.field_input,
-.field_textarea {
-
-    border-bottom: 1px solid var(--connect-line);
-    box-shadow: 0 1px var(--connect-line);
-
+.field_textarea::placeholder {
+    color: color-mix(in srgb, var(--black) 50%, transparent);
+    font-family: var(--titles);
+    font-size: 18px;
 }
