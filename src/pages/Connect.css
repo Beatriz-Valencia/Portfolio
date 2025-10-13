@@ -1,6 +1,6 @@
 :root {
     --connect-side-pad: clamp(16px, 6vw, 80px);
-    --connect-top-pad: clamp(64px, 10vh, 120px);
+    --connect-top-pad: clamp(94px, 14vh, 150px);
     /*espacio para navbar*/
     --connect-field-gap: clamp(28px, 5vh, 56px);
     --connect-line: color-mix(in srgb, var(--black) 20%, transparent);
@@ -25,7 +25,7 @@
 .connect_container h3 {
     font-family: var(--titles);
     letter-spacing: .02em;
-    margin: 0 0 clamp(36pc, 8vhy, 72px);
+    margin: 0 0 clamp(36px, 8vh, 72px);
     font-size: 28px;
     font-weight: 400;
     text-align:center;
@@ -38,7 +38,6 @@
     /*centrado horizontalmente en el contenedor*/
     display: grid;
     gap: var(--connect-field-gap);
-    text-align: center;
 
 }
 
@@ -49,9 +48,6 @@
     width: 100%;
     border: none;
     background: var(--white);
-    font-family: var(--titles);
-
-
     outline: none;
     caret-color: var(--black);
     /*color del cursor de texto*/
@@ -59,26 +55,23 @@
 
 
 .field_textarea {
-    min-height: 140px;
+ 
     resize: vertical;
     width: 100%;
     background: var(--white);
     border: none;
-    border-bottom: 1px solid var(--connect-line);
-    color: var(--black);
+    border-bottom: 0.5px solid var(--connect-line);
     padding: 6px 0 10px;
-    border-bottom: 1px solid var(--connect-line);
     box-shadow: 0 1px var(--connect-line);
-    min-height: 140px;
+    min-height: 120px;
     /*altura mínima para el textarea*/
-    padding: 6px 0 10px;
     line-height: 1.6;
-    text-align: center;
+
 
 }
 
 .field_textarea::placeholder {
     color: color-mix(in srgb, var(--black) 50%, transparent);
-    font-family: var(--titles);
-    font-size: 18px;
+    font-family: var(--text);
+    font-size: 16px;
 }
