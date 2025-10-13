@@ -14,7 +14,7 @@ export default function Input ({
     return (
         <label className ="field" htmlFor={id}>
             <span className="field_label">
-            {label}{required && "*"}
+            {label}{required}
             </span>
 
         <input

@@ -1,0 +1,23 @@
+.field {
+    display:block; 
+    width: 100%;
+}
+
+.field_label {
+    display:block;
+    font-family: (--titles);
+    font-size: clamp(16px, 1.4vw, 22px);
+    letter-spacing: .28em;
+    color: var(--black);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+
+}
+      
+
+.field_input {
+    width: 100%;
+    background: transparent;
+    color: var(--black);
+    padding: 6px 0 10px;
+}

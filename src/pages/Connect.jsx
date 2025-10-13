@@ -59,69 +59,68 @@ const Connect = () => {
     window.location.href = href;
     // navigate("/thanks");
   };
-    //Render del formulario
-    return (
-      <div className="connect_background">
-        <div className="connect_container">
-          <h3>LET'S START THE CONVERSATION</h3>
+  //Render del formulario
+  return (
+    <div className="connect_background">
+      <div className="connect_container">
+        <h3>LET'S START THE CONVERSATION</h3>
 
-          <form onSubmit={handleSubmit} className="connect_form">
-            {/*Nombre*/}
-            <Input
-              name="name"
-              label="NAME"
-              required
-              placeholder="NAME*"
-              value={formData.name}
-              onChange={handleChange}
-            />
+        <form onSubmit={handleSubmit} className="connect_form">
+          {/*Nombre*/}
+          <Input
+            name="name"
+            required
+            placeholder="NAME*"
+            value={formData.name}
+            onChange={handleChange}
+          />
 
-            {/*Email*/}
-            <Input
-              name="email"
-              required
-              placeholder="EMAIL*"
-              value={formData.email}
-              onChange={handleChange}
-            />
+          {/*Email*/}
+          <Input
+            name="email"
+            required
+            placeholder="EMAIL*"
+            value={formData.email}
+            onChange={handleChange}
+          />
 
-            {/*Teléfono, opcional*/}
-            <Input
-              name="phone"
-              placeholder="TELEPHONE*"
-              value={formData.phone}
-              onChange={handleChange}
-            />
+          {/*Teléfono, opcional*/}
+          <Input
+            name="phone"
+            required
+            placeholder="TELEPHONE*"
+            value={formData.phone}
+            onChange={handleChange}
+          />
 
-            {/*Mensaje*/}
-            <label className="field" htmlFor="message">
-              <div className="field_textarea_container">
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              className="field_textarea_container"
-              placeholder="HOW CAN I HELP YOU*"
-              required
-            />
+          {/*Mensaje*/}
+          <label className="field" htmlFor="message">
+            <div className="field_textarea_container">
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                className="field_textarea"
+                placeholder="HOW CAN I HELP YOU"
+              />
             </div>
-            </label>
+          </label>
 
-            <Button type="submit" label="[SUBMIT]"/>
-          </form>
+          <Button type="submit" label="[SUBMIT]" />
+        </form>
 
-          {/*Fallback: si JS está desactivado, se muestra un link mailto simple*/}
-          <noscript>
-            <p>
-              JavaScript is not available. You can write me directly at{" "}
-              <a href="mailto:beconpe.enquiries@gmail.com?subject=Connect%20from%20web">
-                beconpe.enquiries@gmail.com
-              </a>
-            </p>
-          </noscript>
-        </div>
+        {/*Fallback: si JS está desactivado, se muestra un link mailto simple*/}
+        <noscript>
+          <p>
+            JavaScript is not available. You can write me directly at{" "}
+            <a href="mailto:beconpe.enquiries@gmail.com?subject=Connect%20from%20web">
+              beconpe.enquiries@gmail.com
+            </a>
+          </p>
+        </noscript>
       </div>
-    );
-  };
+    </div>
+  );
+};
 
 export default Connect;
