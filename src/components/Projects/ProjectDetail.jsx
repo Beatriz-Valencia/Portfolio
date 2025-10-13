@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import data from "../../data/data";
 import "../../components/Projects/ProjectDetail.css";
+import Button from "../Button";
 
 import {
     SiHtml5,
@@ -95,9 +96,9 @@ export default function ProjectDetail() {
         )}
         <div className="detail-description">
             <span>{project.description}</span>
-            <button onClick={()=> navigate("/projects")} className="button-navigate">
-                Return to projects
-            </button>
+            <Button onClick={()=> navigate("/projects")} 
+            className="general_button" 
+            label="[RETURN TO PROJECTS]"/>
         </div>
         </section>
   );

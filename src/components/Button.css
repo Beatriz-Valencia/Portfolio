@@ -6,7 +6,6 @@
     font-family: var(--text);
     font-size: 18px;
     color: var(--black);
-    /* box-sizing: border-box; */
     border: none;
     background: var(--white);
     cursor: pointer;
