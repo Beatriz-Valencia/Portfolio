@@ -1,0 +1,29 @@
+.general_button {
+    display: inline-flex; /*centra el texto vertical/horizontal*/
+    justify-content:center;
+    justify-self: center; /*central el botón dentro del grid*/
+    align-items: center;
+    font-family: var(--text);
+    font-size: 18px;
+    color: var(--black);
+    /* box-sizing: border-box; */
+    border: none;
+    background: var(--white);
+    cursor: pointer;
+    padding: 5px 8px;
+    border-radius: 6px;
+
+}
+
+.general_button:hover {
+    background: var(--black);
+    color: var(--white);
+    padding: 5px 8px;
+
+}
+
+.general_button:active {
+    background: var(--black);
+    color: var(--white);
+    padding: 5px 8px;
+}

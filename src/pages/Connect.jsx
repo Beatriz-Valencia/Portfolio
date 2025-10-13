@@ -106,7 +106,7 @@ const Connect = () => {
             </div>
           </label>
 
-          <Button type="submit" label="[SUBMIT]" />
+          <Button type="submit" label="[SUBMIT]" className="general_button"/>
         </form>
 
         {/*Fallback: si JS está desactivado, se muestra un link mailto simple*/}

@@ -1,7 +1,7 @@
 /*Home.jsx*/
 .home {
-    --scalableText: clamp(8px, 1.5vw, 20px);
-    --gap-text-wordmark: clamp(8px, 2vw, 20px);
+    --scalableText: clamp(6px, 1vw, 14px);
+    --gap-text-wordmark: clamp(6px, 1.2vw, 14px);
     --gap-text-wordmark-mobile: clamp(1px, 0.2vw, 3px);
     
     min-height: 100vh;
@@ -12,7 +12,7 @@
     padding: var(--scalableText);
     display: grid;
 
-    grid-template-columns: 1.25fr 0.95fr;
+    grid-template-columns: 1.1fr 0.9fr;
     grid-template-rows: auto auto 1fr auto var(--gap-text-wordmark) auto;
     grid-template-areas:
         "top-text ."
@@ -23,8 +23,8 @@
         ".           ."
         /*fila espaciadora*/
         "wordmark image";
-    column-gap: clamp(8px, 1.5vw, 20px);
-    padding-block: clamp(3px, 0.8vh, 6px);
+    column-gap: clamp(6px, 1vw, 14px);
+    padding-block: clamp(2px, 0.6vh, 4px);
     row-gap: 0;
     color: var(--black);
     background: var(--white);
@@ -53,44 +53,44 @@
 .title_terciary,
 .text {
     margin: 0;
-    padding-left: clamp(12px, 2.5vw, 20px);
+    padding-left: clamp(8px, 1.6vw, 14px);
 }
 
 .title_primary {
-    margin: 10px;
+    margin: 8px;
     font-family: var(--titles);
     font-weight: 600;
-    font-size: clamp(18px, 1.8vw, 20px);
+    font-size: clamp(16px, 1.4vw, 18px);
     letter-spacing: .06em;
 }
 
 .title_secondary {
-    margin: 10px;
-    margin-top: 20px;
+    margin: 8px;
+    margin-top: 14px;
     font-family: var(--titles);
     font-weight: 600;
-    font-size: clamp(28px, 4vw, 44px);
+    font-size: clamp(22px,3.2vw, 36px);
     line-height: 1.05;
     letter-spacing: .01em;
     color: var(--negro);
 }
 
 .text {
-    margin: clamp(10px, 2vw, 18px) 0 0;
-    max-width: 51ch;
+    margin: clamp(8px, 1.4vw, 14px) 0 0;
+    max-width: 52ch;
     font-family: var(--text);
-    font-size: clamp(18px, 2.6vw, 22px);
+    font-size: clamp(16px, 1.6vw, 20px);
     line-height: 1.35;
     color: (--black);
 
 }
 
 .title_terciary {
-    margin: clamp(8px, 2vw, 12px) 0 0;
+    margin: clamp(6px, 1.4vw, 10px) 0 0;
     /* 0 0 es para los márgenes laterales*/
     font-family: var(--titles);
     font-weight: 800;
-    font-size: clamp(90px, 18vw, 180px);
+    font-size: clamp(48px, 10vw, 120px);
     line-height: .95;
     letter-spacing: .005em;
     color: var(--black);
@@ -100,7 +100,7 @@
 }
 
 .home img {
-    margin: 10px;
+    margin: 8px 0 16px 8px;
     margin-right: 0px;
     margin-bottom: 20px;
     padding-left:0;
