@@ -4,10 +4,10 @@
     --gap-text-wordmark: clamp(4px, 1.2vw, 10px);
     --gap-text-wordmark-mobile: clamp(1px, 0.2vw, 3px);
     
-    height: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
-    min-height: 100svh;
+    
+    /* min-height: 100vh;
+    min-height: 100dvh; */
+  height: 100svh;
     
     margin: 0 auto;
     padding: var(--scalableText);
@@ -26,13 +26,12 @@
         ".           ."
         /*fila espaciadora*/
         "wordmark image";
-    padding: clamp (8px, 1.2vw, 16px);
     column-gap: clamp(6px, 1vw, 14px);
     padding-block: clamp(2px, 0.6vh, 4px);
     row-gap: 0;
     color: var(--black);
     background: var(--white);
-    align-content: center;
+    align-content: start;
 }
 
 /*Mapeo de elementos en áreas del grid*/
@@ -60,32 +59,32 @@
     padding-left: clamp(8px, 1.6vw, 14px);
 }
 
-.title_primary {
-    margin: 8px;
+/* .title_primary {
+    margin: 6px;
     font-family: var(--titles);
     font-weight: 600;
     font-size: clamp(16px, 1.4vw, 18px);
     letter-spacing: .06em;
-}
+} */
 
 .title_secondary {
-    margin: 8px;
-    margin-top: 14px;
+    
+    margin-top: 12px;
     font-family: var(--titles);
     font-weight: 600;
     font-size: clamp(22px,3.2vw, 36px);
     line-height: 1.05;
     letter-spacing: .01em;
-    color: var(--negro);
+    color: var(--black);
 }
 
 .text {
-    margin: clamp(8px, 1.4vw, 14px) 0 0;
+    margin-top: clamp(6px, 1vw, 12px) 0 0;
     max-width: 58ch;
     font-family: var(--text);
-    font-size: clamp(12px, 1.2vw, 14px);
+  font-size: clamp(14px, 1.2vw, 16px);
     line-height: 1.35;
-    color: (--black);
+    color: var(--black);
 
 }
 
