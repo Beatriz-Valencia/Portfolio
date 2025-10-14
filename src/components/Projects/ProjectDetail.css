@@ -107,8 +107,8 @@
     grid-area: description;
     align-self: end;
     justify-self: end;
-    font-family: var(--titles);
-    font-size: 16px;
+    font-family: var(--text);
+    font-size: 14px;
     text-align: right;
     margin: 0;
     display: flex;

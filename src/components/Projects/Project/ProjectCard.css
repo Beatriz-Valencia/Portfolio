@@ -27,7 +27,7 @@
     /* Top, right, bottom, left = 0 → ocupa todo el contenedor  */
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
    padding: 8px;
    box-sizing: border-box;
