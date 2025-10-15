@@ -7,7 +7,7 @@
     margin: 0 auto;
     padding: clamp(16px, 4vw, 48px);
     align-items: start;
-    background: (--white);
+    /* background: (--white); */
     padding-top: clamp(84px, 13vh, 144px);
 }
 
@@ -17,9 +17,20 @@
     height: 75vh;
     object-fit: cover;
     border-radius: 4px;
-    filter: grayscale;
     box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+    transform-origin: center center;
+    animation: photoShrink 800ms ease-out 300ms forwards;
 
+}
+
+@keyframes photoShrink {
+    from {
+        transform: scale(0.8);
+    }
+
+    to {
+        transform: scale(1);
+    }
 }
 
 .textProfile {
@@ -31,6 +42,23 @@
     font-family: var(--text);
     color: var(--black);
     margin: 0;
+    transform: translateY(16px);
+    animation: textRise 600ms ease-out forwards;
+}
+
+.textProfile p:nth-child(1) {
+    animation-delay: 180ms;
+}
+
+.textProfile p:nth-child(2) {
+    animation-delay: 320ms;
+}
+
+@keyframes textRise {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /*RESPONSIVE MAX WIDTH 900px*/
@@ -51,12 +79,20 @@
         height: auto;
         object-fit: cover;
         margin-top: 15rem;
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+        opacity: 1 !important;
     }
 
     .textProfile {
         grid-area: textProfile;
         min-width: 0;
         /*es un seguro para grid y flex que evita que una columna con texto largo o contenido ancho empuje y rompa el layout*/
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+        opacity: 1 !important;
     }
 }
 

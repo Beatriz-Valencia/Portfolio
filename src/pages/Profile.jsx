@@ -5,7 +5,7 @@ export default function Profile() {
   return (
     <section className="profile">
      
-      <h3 className="textProfile">
+      <div className="textProfile">
         <p>
         I’ve spent over a decade leading design and construction projects in London — at iconic venues such as the British Library, 
      the Natural History Museum, and the Royal Opera House — and I’m now pivoting my career in Spain to focus on what I enjoy most: 
@@ -19,7 +19,7 @@ export default function Profile() {
      databases like MongoDB and SQL; and tools like GitHub. I’ve discovered a genuine passion for programming and would love to put what I’ve learned into practice 
      by joining a technical team.
         </p>
-      </h3>
+      </div>
       <img src={SamplePicture} alt="foto trabajando con portátil" />
     </section>
   );
