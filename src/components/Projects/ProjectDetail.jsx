@@ -38,26 +38,6 @@ const ICONS = {
 
 }
 
-
-
-// //Transforma un URL de Youtube en URL embedded
-// function toYoutubeEmbed(url) {
-//   try {
-//     const u = new URL(url); //Parsea la cadena a objecto URL
-//     if (u.hostname.includes("youtube.com")) {
-//       const id = u.searchParams.get("v"); //extrae parámetro v (id del video)
-//       return id ? `https://www.youtube.com/embed/${id}` : url; //devuelve URL /embed/ID
-//     }
-//     if (u.hostname === "youtu.be") {
-//       const id = u.pathname.slice(1); //quita la barra inicial
-//       return id ? `https://www.youtube.com/embed/${id}` : url;
-//     }
-//     return url;
-//   } catch (e) {
-//     return url;
-//   }
-// }
-
 export default function ProjectDetail() {
   const { id } = useParams(); //lee el parámetro :id de la URL
   const navigate = useNavigate();
@@ -85,7 +65,7 @@ export default function ProjectDetail() {
                     const key = t.trim().toLowerCase();
                     const Icon = ICONS[key] || TbCode; //fallback genérico
                     return (
-                        <li key={t} className="tech-chip" title={t}>
+                        <li key={t} className="tech-chip" title={t} data-tech={key}>
                                 <Icon size={16}/>
                                 <span>{t}</span>
                         </li>   

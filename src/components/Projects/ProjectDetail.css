@@ -28,7 +28,13 @@
     font-family: var(--titles);
     font-size: 38px;
     max-width: 400ch;
+    transition: transform 0.25s ease;
 }
+
+.detail-title:hover {
+    transform: scale(1.05);
+}
+
 
 .video {
     grid-area: video;
@@ -60,7 +66,7 @@
     justify-self: start;
     display: flex;
     flex-direction: column;
-    justify-content:flex-end;
+    justify-content: flex-end;
     min-height: 0;
 }
 
@@ -69,7 +75,13 @@
     max-height: 400px;
     width: 100%;
     height: auto;
+    transition: transform 0.25s ease;
 }
+
+.detail-image:hover {
+    transform: scale(1.06);
+}
+
 
 .techs {
     grid-area: techs;
@@ -79,29 +91,17 @@
 
 /*fila de chips*/
 .tech-list {
-    display:flex;
-    gap:10px;
-    margin:0;
-    padding:0;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
     list-style: none;
-    flex-wrap: nowrap; /*para una sola fila*/
+    flex-wrap: nowrap;
+    /*para una sola fila*/
     overflow-x: auto;
     white-space: nowrap;
-   
-}
 
-.tech-chip {
-    display: inline-flex; /*REVISAR*/
-    align-items: center;
-    gap: 6px;
-    padding: 6px 10px;
-    border-radius:999px;
-    font-size: 12px;
-    border: 1px solid rgba(255,255,255,.25);
-    background: color-mix(in srgb, var(--black) 10%, transparent);
-    
 }
-
 
 .detail-description {
     grid-area: description;
@@ -122,12 +122,93 @@
     padding-bottom: 8px;
 }
 
-.button-navigate {
-    position:sticky;
-    align-self:flex-end;
+/* .general_button {
+    position: sticky;
+    align-self: flex-end;
     margin-top: 0;
     padding: 8px 12px;
     z-index: 1;
+
+} */
+
+/*Estilos tecnologías*/
+.tech-chip {
+    display: inline-flex;
+    /*REVISAR*/
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    border: var(--white);
+    background: var(--white);
+    transition: transform 0.2s ease, color 0.2s ease;
+    font-family: var(--text);
+
+}
+
+/* Colores por tecnología en hover */
+.tech-chip[data-tech="react"]:hover {
+    background: #61dafb;
+    color: #000;
+}
+
+.tech-chip[data-tech="javascript"]:hover {
+    background: #f7df1e;
+    color: #000;
+}
+
+.tech-chip[data-tech="typescript"]:hover {
+    background: #3178c6;
+    color: #fff;
+}
+
+.tech-chip[data-tech="css"]:hover {
+    background: #264de4;
+    color: #fff;
+}
+
+.tech-chip[data-tech="html"]:hover,
+.tech-chip[data-tech="html5"]:hover {
+    background: #e34c26;
+    color: #fff;
+}
+
+.tech-chip[data-tech="redux"]:hover {
+    background: #764abc;
+    color: #fff;
+}
+
+.tech-chip[data-tech="node"]:hover,
+.tech-chip[data-tech="node.js"]:hover {
+    background: #3c873a;
+    color: #fff;
+}
+
+.tech-chip[data-tech="express"]:hover {
+    background: #000000;
+    color: #fff;
+}
+
+.tech-chip[data-tech="mongodb"]:hover {
+    background: #47a248;
+    color: #fff;
+}
+
+.tech-chip[data-tech="postman"]:hover {
+    background: #ff6c37;
+    color: #fff;
+}
+
+.tech-chip[data-tech="swagger"]:hover {
+    background: #85ea2d;
+    color: #000;
+}
+
+.tech-chip[data-tech="unsplash"]:hover,
+.tech-chip[data-tech="unsplash api"]:hover {
+    background: #000000;
+    color: #fff;
 }
 
 
@@ -148,7 +229,7 @@
 
     .techs {
         justify-self: stretch;
-        text-align:center;
+        text-align: center;
     }
 
     .detail-title,
@@ -163,14 +244,14 @@
     .video,
     .stack {
         max-width: 100%;
-      
+
     }
 
     .video-element {
         max-width: 100%;
         height: auto;
         aspect-ratio: 16/9;
-       
+
     }
 
     .detail-image {
