@@ -69,7 +69,18 @@
     line-height: 1.05;
     letter-spacing: .01em;
     color: var(--black);
+    opacity: 0;
+    transform: translateY(-16px);
+    animation: dropIn 600ms ease-out 120ms forwards;
 }
+    @keyframes dropIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+   
+    
 
 .text {
     margin: clamp(2px, 0.4vw, 8px) 0 0;
@@ -92,7 +103,17 @@
     color: var(--black);
     text-transform: uppercase;
     align-self: end;
+     opacity: 0;
+    transform: translateY(16px);
+    animation: riseIn 600ms ease-out 120ms forwards;
 
+}
+
+@keyframes riseIn {
+    to {
+        opacity:1;
+        transform: translateY(0);
+    }
 }
 
 .home img {
@@ -111,8 +132,8 @@
     /* Alinea la imagen arriba de su celda */
     display: block;
     border-radius: 2px;
-
 }
+
 
 /*RESPONSIVE MAX WIDTH 1024px*/
 @media (max-width: 1024px) {
