@@ -1,10 +1,11 @@
 .navbar {
     position:fixed;
     top: clamp(15px, 3vs, 25px);
-    right: clamp(10px, 2vw, 24px);
+    right: clamp(8px, 1.2vw, 5px);
     display:flex;
     gap:clamp(8px, 1.2vw, 16px);
     z-index: 1000;
+    margin: clamp(5px, 1.2vw, 11px);
 }
 
 .nav-button {
