@@ -11,3 +11,9 @@
 .nav-button {
     padding: 6px 10px;
 }
+
+@media (max-width: 480px) {
+    .navbar {
+        padding-top: clamp(3px, 0.6vh, 4px);
+    }
+}
