@@ -48,6 +48,6 @@
     font-weight: 600;
  }
 
-.card:hover, .card-image {
+.card:hover .card-image {
     transform: scale(1.1);
 } 
