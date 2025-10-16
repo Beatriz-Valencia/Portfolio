@@ -1,5 +1,5 @@
-import React, { createContext, useReducer } from "react";
-import projects from "../../data/projects";
+import React, { createContext, useReducer, useEffect } from "react";
+import projects from "../../data/data";
 import ProjectReducer from "./ProjectReducer";
 
 
@@ -8,13 +8,17 @@ const initialState = {
   project: {},
 };
 
-export const ProductContext = createContext(initialState);
+export const ProjectContext = createContext(initialState);
 
 export const ProjectProvider = ({ children }) => {
   const [state, dispatch] = useReducer(ProjectReducer, initialState);
 
+  const getProjects =() => {
+    dispatch({type: "GET_PROJECTS", payload: projects})
+  };
+
   useEffect(() => {
-    dispatch({ type: "GET_PROJECTS", payload: projects });
+   getProjects();
   }, []);
 
   return (

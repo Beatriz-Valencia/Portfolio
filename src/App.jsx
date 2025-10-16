@@ -6,18 +6,18 @@ import Projects from "./pages/Projects";
 import Connect from "./pages/Connect";
 import ProjectDetail from "./components/Projects/ProjectDetail";
 // import Thanks from "./pages/Thanks";
-//import { ProjectProvider } from "./context/ProjectContext/ProjectState";
-//import Header from "./components/Header";
+import { ProjectProvider } from "./context/ProjectContext/ProjectState";
+import Header from "./components/Header";
 //import Footer from "./components/Footer";
-//import Button from "./components/Button";
+import Button from "./components/Button";
 import Input from "./components/Input";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        {/* <ProjectProvider>
-          <Header/>*/}
+         <ProjectProvider>
+          <Header/>
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
@@ -25,11 +25,11 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/connect" element={<Connect />} />
           {/* <Route path="/thanks" element={<Thanks/>} /> */}
-          {/*<Route path="/Button" element={<Button />} />*/}
+          <Route path="/Button" element={<Button />} />
           <Route path="Input" element={<Input />} />
         </Routes>
         {/*<Footer/>*/}
-        {/* </ProjectProvider> */}
+         </ProjectProvider> 
       </BrowserRouter>
     </div>
   );
