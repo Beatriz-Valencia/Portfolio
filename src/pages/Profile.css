@@ -105,13 +105,11 @@
         grid-template-areas:
             "photo"
             "textProfile";
-        padding: clamp(5px, 2vw, 10px);
+        padding: clamp(7px, 2vw, 15px);
         gap: clamp(10px, 2vw, 16px);
         box-sizing: border-box;
         /*evita desbordes por padding*/
     }
-
-
 
     .profile img {
         grid-area: photo;
@@ -119,13 +117,17 @@
         height: auto;
         width: 100%;
         object-fit: cover;
-        /*REVISAR*/
-
+        margin-top: 150px;
     }
 
     .textProfile {
         grid-area: textProfile;
         min-width: 0;
+        font-size: 14px;
+        margin: 10px;
+        
+        
+       
     }
 
 
