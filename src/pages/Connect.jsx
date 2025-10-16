@@ -63,7 +63,8 @@ const Connect = () => {
   return (
     <div className="connect_background">
       <div className="connect_container">
-        <h3>LET'S START THE CONVERSATION</h3>
+        <h4>EVERY GREAT PROJECT STARTS WITH A SIMPLE HELLO</h4>
+        <h2>LET'S BUILDING SOMETHING TOGETHER</h2>
 
         <form onSubmit={handleSubmit} className="connect_form">
           {/*Nombre*/}

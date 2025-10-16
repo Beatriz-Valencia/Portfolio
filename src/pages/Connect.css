@@ -23,12 +23,21 @@
 }
 
 
-.connect_container h3 {
-    font-family: var(--titles);
+.connect_container h4 {
+    font-family: var(--text);
     letter-spacing: .02em;
     margin: 0 0 clamp(36px, 8vh, 72px);
-    font-size: 28px;
+    font-size: 18px;
     font-weight: 400;
+    text-align:center;
+}
+
+.connect_container h2 {
+    font-family: var(--titles);
+    letter-spacing: .0005em;
+    font-weight: 500;
+    margin: 0 0 clamp(36px, 8vh, 72px);
+    font-size: 36px;
     text-align:center;
 }
 

@@ -1,5 +1,6 @@
 .background {
     background: var(--white);
+    min-height: 100svh;
 }
 
 
@@ -42,6 +43,8 @@ padding-top: clamp(40px, 10vh, 120px);
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
     }
+
+
 }
 
 @media (max-width: 640px) {
