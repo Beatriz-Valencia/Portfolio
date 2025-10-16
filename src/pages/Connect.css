@@ -27,6 +27,7 @@
     font-family: var(--text);
     letter-spacing: .02em;
     margin: 0 0 clamp(36px, 8vh, 72px);
+    padding-top: 40px;
     font-size: 18px;
     font-weight: 400;
     text-align:center;
