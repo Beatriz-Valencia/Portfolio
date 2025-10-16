@@ -19,9 +19,14 @@ padding: 30px;
     margin: 0;
     font-family: var(--titles);
     text-align: center;
-    
-    
+    transition: transform 0.35s ease;
+    transform-origin: center center;  
 }
+
+ .projects-title:hover {
+    transform: scale(1.1);
+} 
+
 
 .projects-grid {
     display: grid;
