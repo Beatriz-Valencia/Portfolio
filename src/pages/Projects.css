@@ -7,6 +7,7 @@
 max-width: 768px;
 margin:0 auto;
 padding: 30px;
+padding-top: clamp(40px, 10vh, 120px);
 }
 
 .projects-header {

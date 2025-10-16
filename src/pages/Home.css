@@ -41,6 +41,7 @@
 
 .title_secondary {
     grid-area: middle-text;
+
 }
 
 .text {
@@ -58,14 +59,6 @@
     margin: 0;
     padding-left: clamp(8px, 1.6vw, 14px);
 }
-
-/* .title_primary {
-    margin: 6px;
-    font-family: var(--titles);
-    font-weight: 600;
-    font-size: clamp(16px, 1.4vw, 18px);
-    letter-spacing: .06em;
-} */
 
 .title_secondary {
     margin: 12px 0 0;
@@ -103,10 +96,6 @@
 }
 
 .home img {
-    /* margin: 8px 0 16px 8px;
-    margin-right: 0px;
-    margin-bottom: 20px;
-    padding-left:0; */
     margin: 0;
     margin-inline-end: var(--scalableText);
     margin-block-end: var(--scalableText);
@@ -170,6 +159,10 @@
     .title_terciary,
     .text {
         margin: 10px 10px;
+    }
+
+    .title_secondary {
+        padding-top: clamp(30px, 6vh, 60px);
     }
 
 }
