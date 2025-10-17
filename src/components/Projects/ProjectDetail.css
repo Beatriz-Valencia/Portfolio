@@ -216,7 +216,7 @@
     body {
         background: var(--white);
         overflow-x: hidden;
-     
+
     }
 
     .detail-container {
@@ -232,7 +232,7 @@
     .video {
         max-width: 100%;
         justify-self: end;
-      
+
     }
 
     .video-element {
@@ -253,7 +253,7 @@
 
     .detail-description {
         word-break: break-word;
-     
+
     }
 
     .tech-list {
@@ -263,7 +263,7 @@
     }
 }
 
-
+/*RESPONSIVE MOBILE*/
 @media (max-width: 600px) {
 
     html,
@@ -283,6 +283,7 @@
         margin-left: auto;
         margin-right: auto;
         max-width: clamp(300px, 360px, 420px);
+        
     }
 
     .detail-container {
@@ -296,13 +297,15 @@
             "video"
             "techs"
             "button";
-        width: clamp(300px, 360px, 420px);
+        width: clamp(300px, 360px, 412px);
         margin-inline: auto;
         gap: 24px;
         padding: 20px 16px;
         height: auto;
         background: var(--white);
         box-sizing: border-box;
+        padding-left: max(3px, calc(env(safe-area-inset-left) + 3px));
+        padding-right: max(3px, calc(env(safe-area-inset-right) + 3px));
     }
 
 
@@ -318,6 +321,16 @@
         max-width: none;
         max-height: none;
         margin: 0 auto;
+    }
+
+    .detail-title,
+    .detail-description,
+    .stack,
+    .video,
+    .techs,
+    .button-return-projects {
+        margin-left: auto;
+        margin-right: auto;
     }
 
 
@@ -370,4 +383,5 @@
         margin: 4px auto 0;
         justify-self: center;
     }
+
 }
