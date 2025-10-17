@@ -297,15 +297,15 @@
             "video"
             "techs"
             "button";
-        width: clamp(300px, 360px, 412px);
+        width: clamp(300px, 360px, 404px);
         margin-inline: auto;
         gap: 24px;
-        padding: 20px 16px;
+        padding: 40px 16px;
         height: auto;
         background: var(--white);
         box-sizing: border-box;
-        padding-left: max(3px, calc(env(safe-area-inset-left) + 3px));
-        padding-right: max(3px, calc(env(safe-area-inset-right) + 3px));
+        padding-left: max(1px, calc(env(safe-area-inset-left) + 1px));
+        padding-right: max(1px, calc(env(safe-area-inset-right) + 1px));
     }
 
 
