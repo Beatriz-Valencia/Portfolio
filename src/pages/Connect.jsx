@@ -3,6 +3,7 @@ import { useState } from "react";
 import Input from "../components/Input";
 import "./Connect.css";
 import Button from "../components/Button";
+import TextType  from "../components/TextAnimations/TextType/TextType";
 
 const Connect = () => {
   // const navigate = useNavigate();
@@ -63,8 +64,28 @@ const Connect = () => {
   return (
     <div className="connect_background">
       <div className="connect_container">
-        <h4>EVERY GREAT PROJECT STARTS WITH A SIMPLE HELLO</h4>
-        <h2>LET'S BUILD SOMETHING TOGETHER</h2>
+        {/* <h4>EVERY GREAT PROJECT STARTS WITH A SIMPLE HELLO</h4>
+        <h2>LET'S BUILD SOMETHING TOGETHER</h2> */}
+        <h4 className="connect-text-h4">
+        <TextType
+          text={["EVERY GREAT PROJECT STARTS WITH A SIMPLE HELLO"]}
+          textColors={["var(--black"]}
+          typingSpeed={75}
+          pauseDuration={1500}
+          showCursor={true}
+          cursorCharacter="|"
+        />
+        </h4>
+          <h2 className="connect-text-h2">
+           <TextType
+          text={["LET'S BUILD SOMETHING TOGETHER"]}
+          textColors={["var(--black)"]}
+          typingSpeed={75}
+          pauseDuration={1500}
+          showCursor={true}
+          cursorCharacter="|"
+        />
+        </h2>
 
         <form onSubmit={handleSubmit} className="connect_form">
           {/*Nombre*/}
@@ -107,7 +128,7 @@ const Connect = () => {
             </div>
           </label>
 
-          <Button type="submit" label="[SUBMIT]" className="general_button"/>
+          <Button type="submit" label="[SUBMIT]" className="general_button" />
         </form>
 
         {/*Fallback: si JS está desactivado, se muestra un link mailto simple*/}

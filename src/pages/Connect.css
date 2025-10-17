@@ -23,7 +23,7 @@
 }
 
 
-.connect_container h4 {
+.connect-text-h4 {
     font-family: var(--text);
     letter-spacing: .02em;
     margin: 0 0 clamp(36px, 8vh, 72px);
@@ -33,7 +33,7 @@
     text-align:center;
 }
 
-.connect_container h2 {
+.connect-text-h2 {
     font-family: var(--titles);
     letter-spacing: .0005em;
     font-weight: 500;
