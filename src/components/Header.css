@@ -1,14 +1,15 @@
 .navbar {
     position:fixed;
-    top: clamp(15px, 3vs, 25px);
-    right: clamp(8px, 1.2vw, 5px);
+    /* top: clamp(15px, 3vs, 25px); */
+     right: clamp(0.06px, 0.005vw, 0.5px); 
     display:flex;
-    gap:clamp(8px, 1.2vw, 16px);
+    gap:clamp(0.06px, 0.01vw, 0.5px);
     z-index: 1000;
-    margin: clamp(5px, 1.2vw, 11px);
-}
+    margin: clamp(0.06px, 0.5vw, 0.5px);
+} 
 
-.nav-button {
+
+.nav_button {
     padding: 6px 10px;
 }
 
