@@ -5,14 +5,14 @@
     grid-template-areas:
         "title video"
         "tablet techs"
-        "tablet description";
+        "tablet description"
+        "tablet button";
     gap: 20px;
     min-height: 100dvh;
     height: 100vh;
     padding: 32px;
     box-sizing: border-box;
     overflow: hidden;
-    /* background: color-mix(in srgb, var(--black) 10%, transparent); */
     background: var(--white);
 
 }
@@ -122,14 +122,11 @@
     padding-bottom: 8px;
 }
 
-/* .general_button {
-    position: sticky;
-    align-self: flex-end;
-    margin-top: 0;
-    padding: 8px 12px;
-    z-index: 1;
-
-} */
+.button-return-projects {
+    grid-area: button;
+    align-self: end;
+    justify-self: end;
+}
 
 /*Estilos tecnologías*/
 .tech-chip {
@@ -213,72 +210,150 @@
 
 
 /*MEDIA QUERIES TABLET*/
-@media (max-width: 900px) {
+@media (min-width: 700px) and (max-width: 1024px) {
+
+    /* Asegura fondo homogéneo (evita bandas si body tenía otro color) */
+    html,
+    body {
+        background: var(--white);
+        overflow-x: hidden; /* corta cualquier overflow lateral */
+    }
+
     .detail-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas:
-            "title"
-            "techs"
-            "description"
-            "video"
-            "tablet";
-        gap: 20px;
-        padding: 20px;
+        /* centra el layout y añade respiración lateral */
+        margin-inline: auto;
+        max-width:  min(980px, 100%); 
+        /* evita tocar bordes en iPad */
+        padding-inline: clamp(13px, 2.5vw, 22px);
+        /* mantén tu grid tal cual, no tocamos áreas */
+        height: auto;
+        /* evita cortes verticales */
+        overflow: visible;
+        /* que nada se recorte */
+        background: var(--white);
+ 
     }
 
-    .techs {
-        justify-self: stretch;
-        text-align: center;
-    }
-
-    .detail-title,
-    .video,
-    .stack,
-    .detail-description {
-        justify-self: stretch;
-        align-self: stretch;
-        text-align: center;
-    }
-
-    .video,
-    .stack {
+    /* El video no debe “chocar” con el borde derecho */
+    .video {
         max-width: 100%;
-
+        justify-self: end;
+        /* conservas alineación a la derecha */
     }
 
     .video-element {
-        max-width: 100%;
-        height: auto;
+        width: 100%;
+        max-width: min(750px, 100%);
+        /* nunca más ancho que la columna */
         aspect-ratio: 16/9;
-
-    }
-
-    .detail-image {
-        max-width: 100%;
+        /* altura consistente entre proyectos */
         height: auto;
-        padding-bottom: 40px;
+        max-height: none;
+        display: block;
     }
 
-    .detail-description {
-        align-items: center;
-        text-align: center;
-    }
+    /* Un poco más de aire también para el bloque de chips y el botón */
+    .techs,
+    .detail-description,
+    .button-return-projects {
+        max-width: 100%;
+  }
+  .detail-description { 
+    word-break: break-word;          /* por si hay palabras largas/URLs */
+  }
+  .tech-list {
+    max-width: 100%;
+    overflow-x: auto;                /* si no cabe, scroll interno; no la página */
+  }
 }
 
+/* ====== Móvil (≤600px): una columna y tu orden ====== */
 @media (max-width: 600px) {
-    .detail-container {
-        gap: 30px;
-        padding: 20px;
-    }
 
-    .detail-title {
-        font-size: 24px;
-        margin-top: 30px;
-    }
 
-    .detail-description {
-        font-size: 16px;
-        max-width: 100%;
+    .detail-title  {
+        text-align: center;  
     }
+  html, body { 
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  .detail-container {
+    /* tu grid se mantiene tal cual */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas:
+      "title"
+      "description"
+      "tablet"
+      "video"
+      "techs"
+      "button";
+    width: clamp(300px, 360px, 420px);
+    margin-inline: auto;
+    gap: 24px;
+    padding: 20px 16px;
+    height: auto;
+    background: var(--white);
+    box-sizing: border-box;
+  }
+
+ 
+  .stack { grid-area: tablet; justify-self: center; }
+  .detail-image {
+    display: block;
+    width: clamp(220px, 240px, 260px); 
+    height: auto;                      /* conserva proporción nativa */
+    max-width: none;                  
+    max-height: none;
+    margin: 0 auto;
+  }
+
+ 
+  .video { grid-area: video; justify-self: center; }
+  .video-element {
+    display: block;
+    width: clamp(280px, 340px, 380px);
+    height: calc(9 / 16 * clamp(280px, 340px, 380px)); /* 16:9 en px */
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    margin: 0 auto;
+    background: #000;
+  }
+
+  .techs {
+    grid-area: techs;
+    width: clamp(300px, 360px, 420px);
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .tech-list {
+    display: flex;
+    flex-wrap: wrap;                 
+    justify-content: center;          
+    gap: 8px 10px;                   
+    margin: 0;
+    padding: 4px 0;
+    max-width: clamp(300px, 360px, 420px);
+    overflow-x: hidden;              
+    white-space: normal;            
+  }
+
+  .tech-chip {
+    font-size: 12px;                 
+    padding: 6px 8px;
+    line-height: 1.2;
+    flex: 0 1 auto;                 
+    overflow-wrap: anywhere;         
+  }
+
+  .button-return-projects {
+    grid-area: button;
+    width: clamp(220px, 260px, 300px);
+    margin: 4px auto 0;
+    justify-self: center;
+  }
 }
