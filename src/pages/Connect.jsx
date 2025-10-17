@@ -52,7 +52,7 @@ const Connect = () => {
 
     //Codificamos la URL mailto
 
-    const href = `mailto:${to}?subject=encodeURIComponent(subject)&body=${encodeURIComponent(
+    const href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
       body
     )}`;
 
@@ -64,12 +64,10 @@ const Connect = () => {
   return (
     <div className="connect_background">
       <div className="connect_container">
-        {/* <h4>EVERY GREAT PROJECT STARTS WITH A SIMPLE HELLO</h4>
-        <h2>LET'S BUILD SOMETHING TOGETHER</h2> */}
         <h4 className="connect-text-h4">
-        <TextType
+        <TextType as="span"
           text={["EVERY GREAT PROJECT STARTS WITH A SIMPLE HELLO"]}
-          textColors={["var(--black"]}
+          textColors={["var(--black)"]}
           typingSpeed={75}
           pauseDuration={1500}
           showCursor={true}
@@ -77,7 +75,7 @@ const Connect = () => {
         />
         </h4>
           <h2 className="connect-text-h2">
-           <TextType
+           <TextType as="span"
           text={["LET'S BUILD SOMETHING TOGETHER"]}
           textColors={["var(--black)"]}
           typingSpeed={75}
@@ -100,6 +98,7 @@ const Connect = () => {
           {/*Email*/}
           <Input
             name="email"
+            type="email"
             required
             placeholder="EMAIL*"
             value={formData.email}
@@ -124,6 +123,7 @@ const Connect = () => {
                 onChange={handleChange}
                 className="field_textarea"
                 placeholder="HOW CAN I HELP YOU"
+                id="message"
               />
             </div>
           </label>
