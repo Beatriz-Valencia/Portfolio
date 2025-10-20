@@ -1,22 +1,27 @@
+
+
 .profile {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "photo text";
     gap: clamp(24px, 4vw, 72px);
-    max-width: 1200px;
+    width: 100%;
+    /* max-width: 1200px; */
     margin: 0 auto;
     padding: clamp(16px, 4vw, 48px);
     align-items: start;
-    /* background: (--white); */
+    background: var(--white);
     padding-top: clamp(84px, 13vh, 144px);
+    min-height: 100svh;
+    box-sizing: border-box;
 }
 
 .profile img {
     grid-area: photo;
     width: 70%;
     height: 50vh;
-    /* transform: scale(0.6); */
     object-fit: cover;
+    opacity: 0.8;
     border-radius: 4px;
     margin-top: 100px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
