@@ -17,7 +17,7 @@
     right: max(6px, env(safe-area-inset-right));
     justify-content: center;  /* centrado horizontal */
     flex-wrap: nowrap;          /* si no cabe en una línea, no se corta */
-    gap: clamp(4px, 1.6vw, 10px); 
+    gap: clamp(4px, 1.6vw, 11px); 
   }
 
   /* Botones: no partir palabras y ajustar tamaño si hace falta */
