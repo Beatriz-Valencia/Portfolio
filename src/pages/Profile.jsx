@@ -1,6 +1,6 @@
 import "./Profile.css";
 // import SamplePicture from "../assets/SamplePicture.jpg";
-import FotoPortatilColor from "../assets/Foto-portatil-B&W.jpg";
+import FotoPortatilColor from "../assets/FotoPortatilB&W.jpg";
 
 export default function Profile() {
   return (
