@@ -46,6 +46,7 @@ It combines **frontend architecture**, **component-driven design**, and **respon
 
 ## 🧠 Architecture
 
+```text
 src/
 ├── components/
 │   ├── Button/
@@ -69,11 +70,12 @@ src/
 │   └── images & media
 ├── App.jsx
 └── main.jsx
-
+```
 
 The app uses **React Router** for dynamic routing and a global **ProjectProvider** for centralized state management.
 
 ---
+
 
 ## 🚀 Installation & Setup
 
@@ -98,31 +100,29 @@ Then visit http://localhost:5173/
 
 ## 🌐 Live Demo
 
-🔗 Visit the live site
-
-(Replace with your custom domain if applicable.)
+🔗 Visit the live site: https://beatrizconchadopeiro.com
 
 ## 🧩 Context Management
 
 This project uses React Context API combined with a Reducer pattern to handle state globally and efficiently.
 
-Structure:
+### Structure:
 
-ProjectState.jsx → Initializes the context provider and dispatches actions
+-ProjectState.jsx → Initializes the context provider and dispatches actions
 
-ProjectReducer.js → Defines logic for state transitions (GET_PROJECTS)
+-ProjectReducer.js → Defines logic for state transitions (GET_PROJECTS)
 
-ProjectContext → Provides global state access to all components like Projects and ProjectDetail
+-ProjectContext → Provides global state access to all components like Projects and ProjectDetail
 
-Why this approach?
-It centralizes data flow, avoids prop drilling, and keeps your code modular — ideal for scaling future features.
+This approach centralizes data flow, avoids prop drilling, and keeps the code modular — ideal for scaling future features.
+
 
 ## 🧭 Navigation Flow
-Route "/" or "/home": Landing page with animated introduction (TextType effect)
-Route "/projects": Displays a responsive grid of all projects
-Route "/project/:id": Dynamic project detail page with video, images, and tech stack
-Route "/profile": Professional background and career overview
-Route "/connect": Contact form connected to default mail client
+#### -Route "/" or "/home": Landing page with animated introduction (TextType effect)
+#### -Route "/projects": Displays a responsive grid of all projects
+#### -Route "/project/:id": Dynamic project detail page with video, images, and tech stack
+#### -Route "/profile": Professional background and career overview
+#### -Route "/connect": Contact form connected to default mail client
 
 
 ## 🖥️ UI & Design Highlights
@@ -133,7 +133,7 @@ Route "/connect": Contact form connected to default mail client
 
 ✨ Fluid typography using clamp() for scalable text sizes
 
-💫 GSAP animations for smooth, subtle transitions
+💫 Animations for smooth, subtle transitions
 
 🧭 Accessible navigation bar with consistent UX
 
@@ -152,31 +152,14 @@ Route "/connect": Contact form connected to default mail client
 
 ✅ Lightweight dependency footprint and modular imports
 
-
-## 🧩 Features in Depth
-
-🧭 Single Page Application (SPA) powered by React Router
-
-🧱 Reusable Components for scalability
-
-🎞️ Video and Image Support within project detail pages
-
-💬 Animated Text with the TextType component
-
-📨 Contact Form that connects to default email client (mailto:)
-
-⚡ Vite-optimized build for instant performance
-
-💅 Minimalist Design System with a consistent typography and color palette
-
 ## 🧑‍💻 Author
 
-Beatriz Conchado Peiró
-Full Stack Developer | Architecture & Design Background
+#### Beatriz Conchado Peiró
+#### Full Stack Developer | IT Project Manager
 
 🌍 Portfolio: https://beatrizconchadopeiro.com
 
 💼 LinkedIn: https://www.linkedin.com/in/beatriz-conchado-peiro-a0276880/
 
-
-⭐️ If you like this project, consider give it a star on GitHub — it really helps and means a lot! 🌟 Thanks for reading
+---
+⭐️ If you like this project, consider give it a star on GitHub — it really helps and means a lot 🌟 Thanks for reading!
