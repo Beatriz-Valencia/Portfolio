@@ -1,16 +1,182 @@
-# React + Vite
+# 🌐 Beatriz Conchado Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### ✨ A modern and minimal personal portfolio built with React & Vite
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🪞 Overview
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This is my **personal portfolio website**, designed and developed to showcase my professional background, selected projects, and contact information.
 
-## Expanding the ESLint configuration
+It combines **frontend architecture**, **component-driven design**, and **responsive layouts**, all powered by **React** and **Vite**.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 💡 Features
+
+- 🎨 **Responsive Design** – Adapts to all screen sizes  
+- ⚡ **Fast Builds** – Thanks to Vite’s optimized bundler  
+- 💬 **Animated Text** – Effects using `TextType`  
+- 🗂️ **Project Grid & Detail Pages** – Auto-rendered from a data source  
+- 📨 **Contact Form** – Email-based direct messaging  
+- 🧭 **Navigation Bar** – SPA navigation using React Router  
+- 🧩 **Global Context** – `ProjectReducer` pattern for project state  
+
+
+---
+
+## ⚙️ Tech Stack
+
+| Category | Technologies |
+|-----------|--------------|
+| **Frontend** | React, Vite, JavaScript (ES6+), CSS3 |
+| **Animations** | ReactBits TextType |
+| **Routing** | React Router DOM |
+| **State Management** | React Context + Reducer |
+| **UI/UX** | Responsive Grid Design, Flexbox, CSS Variables |
+| **Build & Deploy** | Vite + Vercel |
+| **Version Control** | Git & GitHub |
+
+---
+
+## 🧠 Architecture
+
+src/
+├── components/
+│   ├── Button/
+│   ├── Header/
+│   ├── Input/
+│   ├── Projects/
+│   │   ├── ProjectCard.jsx
+│   │   └── ProjectDetail.jsx
+│   └── TextAnimations/
+│       └── TextType/
+├── context/
+│   └── ProjectContext/
+│       ├── ProjectReducer.js
+│       └── ProjectState.jsx
+├── pages/
+│   ├── Home.jsx
+│   ├── Profile.jsx
+│   ├── Projects.jsx
+│   └── Connect.jsx
+├── assets/
+│   └── images & media
+├── App.jsx
+└── main.jsx
+
+
+The app uses **React Router** for dynamic routing and a global **ProjectProvider** for centralized state management.
+
+---
+
+## 🚀 Installation & Setup
+
+To run this project locally:
+
+```bash
+# Clone the repository
+git clone https://github.com/Beatriz-Valencia/Portfolio.git
+
+# Move into the folder
+cd <Portfolio>
+
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
+```
+Then visit http://localhost:5173/
+ in your browser. 
+
+
+## 🌐 Live Demo
+
+🔗 Visit the live site
+
+(Replace with your custom domain if applicable.)
+
+## 🧩 Context Management
+
+This project uses React Context API combined with a Reducer pattern to handle state globally and efficiently.
+
+Structure:
+
+ProjectState.jsx → Initializes the context provider and dispatches actions
+
+ProjectReducer.js → Defines logic for state transitions (GET_PROJECTS)
+
+ProjectContext → Provides global state access to all components like Projects and ProjectDetail
+
+Why this approach?
+It centralizes data flow, avoids prop drilling, and keeps your code modular — ideal for scaling future features.
+
+## 🧭 Navigation Flow
+Route "/" or "/home": Landing page with animated introduction (TextType effect)
+Route "/projects": Displays a responsive grid of all projects
+Route "/project/:id": Dynamic project detail page with video, images, and tech stack
+Route "/profile": Professional background and career overview
+Route "/connect": Contact form connected to default mail client
+
+
+## 🖥️ UI & Design Highlights
+
+🧱 Grid & Flexbox Layouts for responsiveness
+
+🎨 CSS Variables for theming (--white, --black, --blue, --brown)
+
+✨ Fluid typography using clamp() for scalable text sizes
+
+💫 GSAP animations for smooth, subtle transitions
+
+🧭 Accessible navigation bar with consistent UX
+
+📱 Mobile-first design, optimized for all breakpoints
+
+
+## ⚡ Performance & Accessibility
+
+⚙️ Vite for lightning-fast builds and instant HMR
+
+🧩 Code-splitting via React Router to optimize page load
+
+🔍 Semantic HTML & ARIA attributes for accessibility
+
+📏 Responsive units (vw, svh, clamp) for precise control
+
+✅ Lightweight dependency footprint and modular imports
+
+
+## 🧩 Features in Depth
+
+🧭 Single Page Application (SPA) powered by React Router
+
+🧱 Reusable Components for scalability
+
+🎞️ Video and Image Support within project detail pages
+
+💬 Animated Text with the TextType component
+
+📨 Contact Form that connects to default email client (mailto:)
+
+⚡ Vite-optimized build for instant performance
+
+💅 Minimalist Design System with a consistent typography and color palette
+
+## 🧑‍💻 Author
+
+Beatriz Conchado Peiró
+Full Stack Developer | Architecture & Design Background
+
+🌍 Portfolio: https://beatrizconchadopeiro.com
+
+💼 LinkedIn: https://www.linkedin.com/in/beatriz-conchado-peiro-a0276880/
+
+
+⭐️ If you like this project, consider give it a star on GitHub — it really helps and means a lot! 🌟 Thanks for reading
