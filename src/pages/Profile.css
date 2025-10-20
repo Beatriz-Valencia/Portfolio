@@ -48,6 +48,7 @@
     opacity: 0;
     transform: translateY(16px);
     animation: textRise 600ms ease-out forwards;
+    margin-top: 60px;
 }
 
 .textProfile p:nth-child(1) {
