@@ -17,13 +17,13 @@ export default function Header() {
       />
       <Button
         className="general_button nav_button"
-        label="PROFILE"
-        onClick={() => navigate("/profile")}
+        label="PROJECTS"
+        onClick={() => navigate("/projects")}
       />
       <Button
         className="general_button nav_button"
-        label="PROJECTS"
-        onClick={() => navigate("/projects")}
+        label="PROFILE"
+        onClick={() => navigate("/profile")}
       />
       <Button
         className="general_button nav_button"
