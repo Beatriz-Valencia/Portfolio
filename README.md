@@ -91,11 +91,39 @@ cd <Portfolio>
 # Install dependencies
 npm install
 
+# Dependencies runtime
+npm i react react-dom react-router-dom react-icons gsap
+
 # Run the development server
 npm run dev
 ```
 Then visit http://localhost:5173/
  in your browser. 
+
+## 🧩 Component Reusability 
+
+Each component handles one clear responsibility and can be easily reused across the app.
+
+### 1. Button (components/Button)
+
+Props: type, label, onClick, className, disabled
+
+👍 Reusable and simple.
+
+### 2. Input (components/Input)
+
+Props: name, label, type, required, value, onChange, placeholder
+
+👍 Encapsulates label, input, and styling in a consistent component.
+
+### 3. ProjectCard (components/Projects/ProjectCard)
+
+👍 Clickable card with image and title.
+
+### 4. ProjectDetail
+
+👍 Dynamic rendering by id, showing images, videos, and technology icons using react-icons.
+
 
 
 ## 🌐 Live Demo
