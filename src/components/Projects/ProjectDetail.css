@@ -19,12 +19,12 @@
 
 
 .detail-title {
+    margin-top: 50px;
     grid-area: title;
     align-self: start;
     /*alinea el título con el inicio vertical de su celda*/
     justify-self: start;
     /*alinea el título con el inicio horizontal de su celda*/
-    margin: 0;
     font-family: var(--titles);
     font-size: 38px;
     max-width: 400ch;
@@ -50,6 +50,7 @@
 }
 
 .video-element {
+    margin-top: 50px;
     width: 100%;
     max-width: 750px;
     max-height: 550px;
