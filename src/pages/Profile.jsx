@@ -15,7 +15,7 @@ export default function Profile() {
      <p>
       I’ve always loved working in teams and coordinating people. 
      In the UK, I became a PRINCE2 Practitioner and a Scrum Master, and more recently an ITIL 4 Practitioner. 
-     I have been programming for over a year now, and recently completed the Full-Stack Development bootcamp at The Bridge, where I learned technologies such as HTML, CSS, JavaScript, React, and Node.js;
+     I have been programming for a long time, and recently completed the Full-Stack Development bootcamp at The Bridge, where I deepened my knowledge in technologies such as HTML, CSS, JavaScript, React, and Node.js;
      databases like MongoDB and SQL; and version control tools like GitHub. I’ve discovered a genuine passion for programming, and would love to put what I’ve learned into practice
     joining a technical team.
         </p>
