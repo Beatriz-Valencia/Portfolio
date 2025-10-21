@@ -145,6 +145,10 @@
         grid-area: image;
         justify-self: end;
     }
+
+    .title_secondary {
+        max-width: 28ch;
+    }
 }
 
 /*RESPONSIVE MAX WIDTH 480px*/

@@ -9,7 +9,7 @@ export default function Home() {
         React | Node | Express | JavaScript | CSS | MongoDB | SQL  Strong track record in project leadership and team management
       </h3>
       <h2 className="title_secondary">
-        FULL STACK DEVELOPER SPECIALISING IN FRONTEND AND BACKEND ARCHITECTURES
+        IT PROJECT MANAGER AND FULL STACK DEVELOPER SPECIALISING IN FRONTEND AND BACKEND ARCHITECTURES
       </h2>
       <h1 className="title_terciary">BEATRIZ CONCHADO PEIRÓ</h1>
       <img src={foto} alt="foto de frente mirando a cámara" />
