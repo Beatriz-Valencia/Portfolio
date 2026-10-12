@@ -8,16 +8,16 @@ export default function Profile() {
      
       <div className="textProfile">
         <p>
-        I’ve spent over a decade leading large-scale technical and strategic projects in London and working with cross-functional international teams — at iconic venues such as the British Library, 
-     the Natural History Museum, and the Royal Opera House. Originally from Valencia, I have now returned to Spain to focus my career on what I enjoy most: 
-     digital products and tech projects. I have experiencie working with IT teams, in data projects and within agile environments.
+       IT Project Manager with over 10 years of experience leading project delivery, having developed a 
+       significant part of my career in London. I currently manage technology projects end-to-end, from defining objectives 
+       and planning through to execution, monitoring, and delivery. I also work daily in maintenance projects.
      </p>
      <p>
-      I’ve always loved working in teams and coordinating people. 
-     In the UK, I became a PRINCE2 Practitioner and a Scrum Master, and more recently an ITIL 4 Practitioner. 
-     I have been programming for a long time, and recently completed the Full-Stack Development bootcamp at The Bridge, where I deepened my knowledge in technologies such as HTML, CSS, JavaScript, React, and Node.js;
-     databases like MongoDB and SQL; and version control tools like GitHub. I’ve discovered a genuine passion for programming, and would love to put what I’ve learned into practice
-    joining a technical team.
+      Certified in ITIL 4, Scrum Master, and PRINCE2. What I enjoy most is working with people and creating the connections 
+      that make great digital projects possible. I see the PM as the invisible glue that keeps everything moving: inspiring people,
+      removing blockers, keeping communication open and human, and making sure everyone knows exactly where they are heading and why.
+      I care a lot about creating spaces where technical and non-technical people can speak openly, challenge each other, 
+      and collaborate. If this sounds like the kind of PM you want to work with, feel free to DM me to collaborate. 
         </p>
       </div>
       {/* <img src={SamplePicture} alt="foto trabajando con portátil" /> */}
